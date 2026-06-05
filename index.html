@@ -957,9 +957,239 @@
         }
 
         .expandable-panel.active .panel-body-content {
-            max-height: 500px;
+            max-height: 3000px;
             padding: 1rem 2rem 2rem;
             border-top: 1px solid var(--border-color);
+        }
+
+        /* --- LEARNING PAGE ADDITIONAL STYLES --- */
+        .learning-example-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 992px) {
+            .learning-example-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .learning-code-box {
+            margin: 0 !important;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .learning-output-box {
+            background-color: #0c0f1d;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .learning-output-header {
+            height: 40px;
+            background-color: #050811;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .learning-output-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            background-color: #080b16;
+            color: #e2e8f0;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+        }
+        .learning-image-container {
+            margin-top: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            background: #ffffff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        .learning-image-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin: 0.5rem 0 0.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .learning-image-caption {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .learning-img {
+            width: 100%;
+            height: auto;
+            max-height: 380px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        /* Interactive Output Elements styling */
+        .live-preview-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.2rem;
+            width: 100%;
+            max-width: 280px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .live-preview-card:hover {
+            transform: translateY(-5px);
+            border-color: #00D4FF;
+        }
+        .live-preview-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d4ff 0%, #ff6b35 100%);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #0A0F1E;
+        }
+        .live-preview-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+            font-family: Georgia, serif;
+        }
+        .live-preview-role {
+            font-size: 0.8rem;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+        .live-preview-badge-group {
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+        .live-preview-badge {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            color: #00d4ff;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        /* JS Output Interactive Elements */
+        .js-output-console {
+            background-color: #050811;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 1rem;
+            width: 100%;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85rem;
+            color: #a855f7;
+            text-align: left;
+        }
+        .console-line {
+            margin-bottom: 0.4rem;
+            color: #38bdf8;
+        }
+        .console-line-success {
+            color: #4ade80;
+        }
+        .console-line-info {
+            color: #fb7185;
+        }
+        .js-run-btn {
+            background: linear-gradient(135deg, #1d5f9f 0%, #b7791f 100%);
+            border: none;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(29, 95, 159, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .js-run-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(29, 95, 159, 0.4);
+        }
+        .js-run-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* React Counter Interactive Elements */
+        .react-counter-container {
+            text-align: center;
+            width: 100%;
+        }
+        .react-counter-val {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0.5rem 0 1rem;
+            font-family: var(--font-heading);
+        }
+        .react-counter-btn-row {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+        .react-counter-btn {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #ffffff;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        .react-counter-btn:hover {
+            border-color: #00d4ff;
+            color: #00d4ff;
+            background: rgba(0, 212, 255, 0.05);
+            transform: scale(1.05);
         }
 
         .panel-takeaway-card {
@@ -2399,6 +2629,52 @@
                             <li>Authored fluid layout grids using advanced CSS Flexbox and Grid equations.</li>
                             <li><strong>Applied in:</strong> Clean page layouts, responsive navigation patterns, and reusable interface sections.</li>
                         </ul>
+
+                        <div class="learning-example-grid">
+                            <!-- Code block -->
+                            <div class="code-editor-mockup learning-code-box">
+                                <div class="editor-header-bar">
+                                    <div class="editor-dots">
+                                        <span class="editor-dot dot-red"></span>
+                                        <span class="editor-dot dot-yellow"></span>
+                                        <span class="editor-dot dot-green"></span>
+                                    </div>
+                                    <span class="editor-title">ProfileCard.html</span>
+                                </div>
+                                <pre class="editor-pre-content"><code class="editor-code-body"><span class="c-cm">&lt;!-- Semantic Structure &amp; Variables CSS --&gt;</span>
+<span class="c-kw">&lt;div</span> <span class="c-vr">class</span>=<span class="c-st">"live-preview-card"</span><span class="c-kw">&gt;</span>
+  <span class="c-kw">&lt;div</span> <span class="c-vr">class</span>=<span class="c-st">"live-preview-avatar"</span><span class="c-kw">&gt;</span>G<span class="c-kw">&lt;/div&gt;</span>
+  <span class="c-kw">&lt;h3</span> <span class="c-vr">class</span>=<span class="c-st">"live-preview-name"</span><span class="c-kw">&gt;</span>Goureesh<span class="c-kw">&lt;/h3&gt;</span>
+  <span class="c-kw">&lt;span</span> <span class="c-vr">class</span>=<span class="c-st">"live-preview-role"</span><span class="c-kw">&gt;</span>CS Engineering Student<span class="c-kw">&lt;/span&gt;</span>
+  <span class="c-kw">&lt;div</span> <span class="c-vr">class</span>=<span class="c-st">"live-preview-badge-group"</span><span class="c-kw">&gt;</span>
+    <span class="c-kw">&lt;span</span> <span class="c-vr">class</span>=<span class="c-st">"live-preview-badge"</span><span class="c-kw">&gt;</span>HTML5<span class="c-kw">&lt;/span&gt;</span>
+    <span class="c-kw">&lt;span</span> <span class="c-vr">class</span>=<span class="c-st">"live-preview-badge"</span><span class="c-kw">&gt;</span>CSS Grid<span class="c-kw">&lt;/span&gt;</span>
+  <span class="c-kw">&lt;/div&gt;</span>
+<span class="c-kw">&lt;/div&gt;</span></code></pre>
+                            </div>
+                            <!-- Output Preview -->
+                            <div class="learning-output-box">
+                                <div class="learning-output-header">Live Output Browser Preview</div>
+                                <div class="learning-output-body">
+                                    <div class="live-preview-card">
+                                        <div class="live-preview-avatar">G</div>
+                                        <h3 class="live-preview-name">Goureesh</h3>
+                                        <span class="live-preview-role">CS Engineering Student</span>
+                                        <div class="live-preview-badge-group">
+                                            <span class="live-preview-badge">HTML5</span>
+                                            <span class="live-preview-badge">CSS Grid</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Generated Mockup Image -->
+                        <div class="learning-image-container">
+                            <img src="assets/html_css_mockup.png" alt="HTML and CSS visual mockup" class="learning-img">
+                            <div class="learning-image-title">UI Design Reference Prototype</div>
+                            <div class="learning-image-caption">Fidelity prototype representing component alignment, visual grids, and color spacing before implementation.</div>
+                        </div>
                         
                         <div class="panel-takeaway-card">
                             <h5>Key Lesson</h5>
@@ -2426,6 +2702,48 @@
                             <li>Virtual representation: Custom schematic solver equations.</li>
                             <li><strong>Applied in:</strong> Browser storage practice, filtering logic, and structured client-side routing.</li>
                         </ul>
+
+                        <div class="learning-example-grid">
+                            <!-- Code block -->
+                            <div class="code-editor-mockup learning-code-box">
+                                <div class="editor-header-bar">
+                                    <div class="editor-dots">
+                                        <span class="editor-dot dot-red"></span>
+                                        <span class="editor-dot dot-yellow"></span>
+                                        <span class="editor-dot dot-green"></span>
+                                    </div>
+                                    <span class="editor-title">FilterEngine.js</span>
+                                </div>
+                                <pre class="editor-pre-content"><code class="editor-code-body"><span class="c-kw">const</span> <span class="c-vr">team</span> = [
+  { <span class="c-vr">name</span>: <span class="c-st">'Goureesh'</span>, <span class="c-vr">role</span>: <span class="c-st">'Lead'</span> },
+  { <span class="c-vr">name</span>: <span class="c-st">'Atharva'</span>, <span class="c-vr">role</span>: <span class="c-st">'Sys'</span> }
+];
+
+<span class="c-cm">// Evaluates role parameter array</span>
+<span class="c-kw">const</span> <span class="c-vr">leads</span> = <span class="c-vr">team</span>.<span class="c-fn">filter</span>(
+  <span class="c-vr">member</span> =&gt; <span class="c-vr">member</span>.<span class="c-vr">role</span> === <span class="c-st">'Lead'</span>
+);
+
+<span class="c-vr">console</span>.<span class="c-fn">log</span>(<span class="c-st">'Match:'</span>, <span class="c-vr">leads</span>[<span class="c-st">0</span>].<span class="c-vr">name</span>);</code></pre>
+                            </div>
+                            <!-- Output Preview -->
+                            <div class="learning-output-box">
+                                <div class="learning-output-header">Live Output Console</div>
+                                <div class="learning-output-body" style="flex-direction: column;">
+                                    <div class="js-output-console" id="js-console-output">
+                                        <div style="color: var(--text-muted); font-style: italic;">Console ready. Click button below to run script.</div>
+                                    </div>
+                                    <button class="js-run-btn" onclick="runJavaScriptDemo()">Execute Script</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Generated Mockup Image -->
+                        <div class="learning-image-container">
+                            <img src="assets/js_logic_mockup.png" alt="JavaScript dynamic logic mockup" class="learning-img">
+                            <div class="learning-image-title">Runtime Pipeline & Event Loop</div>
+                            <div class="learning-image-caption">Visualization of standard async operations, processing callback tasks inside browser schedules.</div>
+                        </div>
                         
                         <div class="panel-takeaway-card">
                             <h5>Key Lesson</h5>
@@ -2454,6 +2772,53 @@
                             <li>OAuth frameworks and secure cookie-based session stores.</li>
                             <li><strong>Applied in:</strong> Full-stack exercises that connect interface state, API routes, and database-backed records.</li>
                         </ul>
+
+                        <div class="learning-example-grid">
+                            <!-- Code block -->
+                            <div class="code-editor-mockup learning-code-box">
+                                <div class="editor-header-bar">
+                                    <div class="editor-dots">
+                                        <span class="editor-dot dot-red"></span>
+                                        <span class="editor-dot dot-yellow"></span>
+                                        <span class="editor-dot dot-green"></span>
+                                    </div>
+                                    <span class="editor-title">InteractiveCounter.jsx</span>
+                                </div>
+                                <pre class="editor-pre-content"><code class="editor-code-body"><span class="c-kw">import</span> { <span class="c-vr">useState</span> } <span class="c-kw">from</span> <span class="c-st">'react'</span>;
+
+<span class="c-kw">export default function</span> <span class="c-fn">Counter</span>() {
+  <span class="c-kw">const</span> [<span class="c-vr">count</span>, <span class="c-vr">setCount</span>] = <span class="c-fn">useState</span>(<span class="c-st">0</span>);
+
+  <span class="c-kw">return</span> (
+    <span class="c-kw">&lt;div&gt;</span>
+      <span class="c-kw">&lt;h3&gt;</span>Value: {<span class="c-vr">count</span>}<span class="c-kw">&lt;/h3&gt;</span>
+      <span class="c-kw">&lt;button</span> <span class="c-vr">onClick</span>={<span class="c-vr">() =&gt; setCount</span>(<span class="c-vr">c =&gt; c + 1</span>)}<span class="c-kw">&gt;</span>+<span class="c-kw">&lt;/button&gt;</span>
+    <span class="c-kw">&lt;/div&gt;</span>
+  );
+}</code></pre>
+                            </div>
+                            <!-- Output Preview -->
+                            <div class="learning-output-box">
+                                <div class="learning-output-header">Live Rendered Component</div>
+                                <div class="learning-output-body">
+                                    <div class="react-counter-container">
+                                        <div style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-orange); font-weight:700; letter-spacing:0.05em; margin-bottom:0.2rem;">React State Hook</div>
+                                        <div class="react-counter-val" id="react-counter-val">0</div>
+                                        <div class="react-counter-btn-row">
+                                            <button class="react-counter-btn" onclick="decrementReactCounter()">-</button>
+                                            <button class="react-counter-btn" onclick="incrementReactCounter()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Generated Mockup Image -->
+                        <div class="learning-image-container">
+                            <img src="assets/react_node_mockup.png" alt="React components and Node route map" class="learning-img">
+                            <div class="learning-image-title">Fullstack Components & Routing</div>
+                            <div class="learning-image-caption">Architectural diagram detailing component states syncing with server routing controllers and backend structures.</div>
+                        </div>
                         
                         <div class="panel-takeaway-card">
                             <h5>Key Lesson</h5>
@@ -3337,48 +3702,24 @@
             </div>
             
             <p class="bio-text-para">
-                This section will be updated as certifications are completed. The following are planned/in-progress:
+                I actively pursue technical certifications to validate my knowledge in cloud technologies, core programming, and modern engineering practices.
             </p>
 
-            <div class="certs-grid">
-                <div class="neon-card cert-card">
-                    <div class="cert-card-header">
-                        <span class="cert-icon-box">🏆</span>
-                        <span class="cert-status-badge status-completed">Completed</span>
+            <div class="certificate-single-container" style="max-width: 800px; margin: 3rem auto; text-align: center;">
+                <div class="neon-card screenshot-card" onclick="openLightbox(this)" style="cursor: pointer; transition: transform 0.3s ease; display: block; overflow: hidden; border-radius: 16px;">
+                    <div class="screenshot-image-wrapper" style="overflow: hidden; border-radius: 12px 12px 0 0; background: #0f172a; display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                        <img src="assets/certificate.png" alt="DevOps Basics for Everyone Certificate" class="screenshot-img" style="max-width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 8px;">
                     </div>
-                    <h3>BTech Computer Science Semester 3</h3>
-                    <p class="provider">KLE Technological University</p>
-                    <p style="font-size:0.95rem;">Successfully finished core engineering coursework covering system designs, algorithms, data structures, and database engines.</p>
-                </div>
-
-                <div class="neon-card cert-card">
-                    <div class="cert-card-header">
-                        <span class="cert-icon-box">🎨</span>
-                        <span class="cert-status-badge status-completed">Completed</span>
+                    <div class="screenshot-info" style="padding: 1.5rem 2rem; text-align: left; background-color: var(--bg-card);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                            <h5 style="margin: 0; font-size: 1.4rem; font-family: var(--font-heading); color: var(--text-primary);">DevOps Basics for Everyone</h5>
+                            <span class="cert-status-badge status-completed" style="font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.8rem; border-radius: 30px; text-transform: uppercase; letter-spacing: 0.05em; background-color: rgba(127, 255, 0, 0.12); color: var(--accent-lime); border: 1px solid rgba(127,255,0,0.25);">Completed</span>
+                        </div>
+                        <p class="provider" style="font-size: 1rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 0.8rem;">IBM (via edX)</p>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                            Verified professional certificate demonstrating fundamental competencies in DevOps concepts, Continuous Integration/Continuous Deployment (CI/CD) pipelines, containerization mechanics, agile development methodologies, and cloud-native application setups.
+                        </p>
                     </div>
-                    <h3>Responsive Web Design</h3>
-                    <p class="provider">freeCodeCamp</p>
-                    <p style="font-size:0.95rem;">HTML5, CSS3 layouts, responsive media queries, flexbox, grid layouts, and visual hierarchy standards.</p>
-                </div>
-
-                <div class="neon-card cert-card">
-                    <div class="cert-card-header">
-                        <span class="cert-icon-box">📊</span>
-                        <span class="cert-status-badge status-completed">Completed</span>
-                    </div>
-                    <h3>SQL (Basic) Certificate</h3>
-                    <p class="provider">HackerRank</p>
-                    <p style="font-size:0.95rem;">Demonstrates proficiency in query construction, subqueries, relational database models, filters, and aggregations.</p>
-                </div>
-
-                <div class="neon-card cert-card">
-                    <div class="cert-card-header">
-                        <span class="cert-icon-box">☁️</span>
-                        <span class="cert-status-badge status-progress">In Progress</span>
-                    </div>
-                    <h3>AWS Cloud Practitioner</h3>
-                    <p class="provider">Amazon Web Services</p>
-                    <p style="font-size:0.95rem;">Studying cloud architecture concepts, key security models, computing pipelines, and scalable database deployments.</p>
                 </div>
             </div>
         </section>
@@ -3612,6 +3953,42 @@
         document.getElementById('back-to-top').addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        /* =========================================
+           INTERACTIVE DEMOS FOR LEARNING PAGE
+           ========================================= */
+        function runJavaScriptDemo() {
+            const consoleBox = document.getElementById('js-console-output');
+            consoleBox.innerHTML = '';
+            
+            // Add lines mimicking compiler/execution
+            const lines = [
+                { text: '> Initializing compiler runtime...', type: 'info' },
+                { text: '> Array team loaded with 2 elements.', type: 'info' },
+                { text: '> Running team.filter(member => member.role === "Lead")...', type: 'info' },
+                { text: 'Match: Goureesh', type: 'success' },
+                { text: 'Script exited successfully with status 0.', type: 'info' }
+            ];
+            
+            lines.forEach((line, index) => {
+                setTimeout(() => {
+                    const lineEl = document.createElement('div');
+                    lineEl.className = 'console-line ' + (line.type === 'success' ? 'console-line-success' : line.type === 'info' ? 'console-line-info' : '');
+                    lineEl.innerText = line.text;
+                    consoleBox.appendChild(lineEl);
+                }, index * 400);
+            });
+        }
+        
+        let reactCounterStateVal = 0;
+        function incrementReactCounter() {
+            reactCounterStateVal++;
+            document.getElementById('react-counter-val').innerText = reactCounterStateVal;
+        }
+        function decrementReactCounter() {
+            reactCounterStateVal--;
+            document.getElementById('react-counter-val').innerText = reactCounterStateVal;
+        }
 
         /* =========================================
            3. INTERACTIVE ACCORDIONS (LEARNINGS)
