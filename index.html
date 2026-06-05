@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -2013,6 +2013,115 @@
             color: var(--text-muted);
             line-height: 1.4;
         }
+
+        /* --- COLLABORATION TEAM PILLS --- */
+        .team-pills-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .team-pill {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all var(--transition-fast);
+        }
+        .team-pill:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.15);
+        }
+        .team-role-lead {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: linear-gradient(135deg, var(--accent-orange), #ff9f43);
+            color: #ffffff;
+            padding: 0.15rem 0.5rem;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        /* --- SCREENSHOT CARD POINTER --- */
+        .screenshot-card {
+            cursor: pointer;
+        }
+
+        /* --- LIGHTBOX MODAL --- */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(6, 10, 20, 0.95);
+            backdrop-filter: blur(10px);
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity var(--transition-smooth);
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 1100px;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.2);
+            transform: scale(0.95);
+            transition: transform var(--transition-smooth);
+        }
+
+        .lightbox-modal.active .lightbox-content {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2.5rem;
+            color: var(--text-secondary);
+            font-size: 2.5rem;
+            font-weight: 300;
+            cursor: pointer;
+            transition: color var(--transition-fast);
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-orange);
+        }
+
+        .lightbox-caption {
+            margin-top: 1.5rem;
+            text-align: center;
+            color: var(--text-primary);
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
     </style>
 </head>
 <body>
@@ -2157,6 +2266,21 @@
                             <span class="tech-pill-badge">System Architecture</span>
                             <span class="tech-pill-badge">Product Thinking</span>
                             <span class="tech-pill-badge">Open Source Engineering</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Development Team -->
+                    <div style="margin: 2rem 0;">
+                        <h4 style="font-size:1.25rem; margin-bottom:1rem; color:var(--accent-orange);">Project Collaboration Team</h4>
+                        <p style="font-size:0.95rem; color:var(--text-secondary); margin-bottom:1rem;">
+                            Collaborating with peer builders to design, construct, and deploy real-world technical solutions:
+                        </p>
+                        <div class="team-pills-group">
+                            <span class="team-pill">Goureesh N Doddamani</span>
+                            <span class="team-pill">Atharva</span>
+                            <span class="team-pill">Ashutosh</span>
+                            <span class="team-pill">Yashwant</span>
+                            <span class="team-pill">Anoosha</span>
                         </div>
                     </div>
                 </div>
@@ -2876,13 +3000,13 @@
 }, [<span class="c-vr">products</span>, <span class="c-vr">filters</span>]);</code></pre>
             </div>
 
-            <!-- Development Timeline -->
-            <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-bottom:1.5rem;">Development Milestones</h3>
+            <!-- Sprint History -->
+            <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-bottom:1.5rem;">Sprint History</h3>
             <div class="timeline-vertical">
                 <div class="timeline-milestone">
                     <div class="timeline-milestone-bullet"></div>
                     <div class="timeline-milestone-content">
-                        <span class="timeline-milestone-date">Week 1 - 2</span>
+                        <span class="timeline-milestone-date">Sprint 1</span>
                         <h4>Vite Configuration & Layout Mockups</h4>
                         <p>Constructed the project architecture, set up the React client routing, and drafted initial mock viewports.</p>
                     </div>
@@ -2891,7 +3015,7 @@
                 <div class="timeline-milestone">
                     <div class="timeline-milestone-bullet"></div>
                     <div class="timeline-milestone-content">
-                        <span class="timeline-milestone-date">Week 3 - 4</span>
+                        <span class="timeline-milestone-date">Sprint 2</span>
                         <h4>Catalog Migration & Prisma Sync</h4>
                         <p>Drafted raw database collections, structured Prisma database schema mapping, and executed seed scripts to load 400+ SKU records.</p>
                     </div>
@@ -2900,7 +3024,7 @@
                 <div class="timeline-milestone">
                     <div class="timeline-milestone-bullet"></div>
                     <div class="timeline-milestone-content">
-                        <span class="timeline-milestone-date">Week 5 - 6</span>
+                        <span class="timeline-milestone-date">Sprint 3</span>
                         <h4>Core Storefront & Multi-Filters Layout</h4>
                         <p>Programmed product list matrices, filter bars, detailed spec overlays, and the dynamic sidebar search panels.</p>
                     </div>
@@ -2909,7 +3033,7 @@
                 <div class="timeline-milestone">
                     <div class="timeline-milestone-bullet"></div>
                     <div class="timeline-milestone-content">
-                        <span class="timeline-milestone-date">Week 7 - 8</span>
+                        <span class="timeline-milestone-date">Sprint 4</span>
                         <h4>Merchant CRUD Controllers & settings</h4>
                         <p>Programmed security barriers and inventory panels, allowing complete CRUD editing of products.</p>
                     </div>
@@ -2918,7 +3042,7 @@
                 <div class="timeline-milestone">
                     <div class="timeline-milestone-bullet"></div>
                     <div class="timeline-milestone-content">
-                        <span class="timeline-milestone-date">Week 9 - 10</span>
+                        <span class="timeline-milestone-date">Sprint 5</span>
                         <h4>Session Gates & Dual Auth Hooks</h4>
                         <p>Programmed secure JWT token structures for admin endpoints, and configured Google OAuth 2.0 customer hooks.</p>
                     </div>
@@ -2927,7 +3051,7 @@
                 <div class="timeline-milestone">
                     <div class="timeline-milestone-bullet"></div>
                     <div class="timeline-milestone-content">
-                        <span class="timeline-milestone-date">Week 11 - 12</span>
+                        <span class="timeline-milestone-date">Sprint 6</span>
                         <h4>Package Calculator & Review System</h4>
                         <p>Programmed custom bundle configuration panels, comparison tables, and local review compilation fields.</p>
                     </div>
@@ -2936,7 +3060,7 @@
                 <div class="timeline-milestone">
                     <div class="timeline-milestone-bullet"></div>
                     <div class="timeline-milestone-content">
-                        <span class="timeline-milestone-date">Week 13 - 14</span>
+                        <span class="timeline-milestone-date">Sprint 7</span>
                         <h4>Load Testing & Server Launch</h4>
                         <p>Performed system optimization checks, resolved viewport adjustments, and launched code targets on Vercel and Railway host lines.</p>
                     </div>
@@ -2950,7 +3074,7 @@
                     Below are the high-fidelity user interface captures demonstrating the end-to-end functionality of the deployed e-commerce platform:
                 </p>
                 <div class="screenshot-grid">
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 112922.png" alt="Home Page Hero Section" class="screenshot-img">
                         </div>
@@ -2959,7 +3083,7 @@
                             <p>Premium dark-tech storefront hero section featuring security value proposition.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 112937.png" alt="CCTV Product Catalog" class="screenshot-img">
                         </div>
@@ -2968,7 +3092,7 @@
                             <p>E-commerce grid listing curated CCTV models and peripheral hardware.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 113004.png" alt="Product Filter & Search" class="screenshot-img">
                         </div>
@@ -2977,7 +3101,7 @@
                             <p>Dynamic client-side sorting and filtering by resolution, brand, and type.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 113012.png" alt="Product Comparison Matrix" class="screenshot-img">
                         </div>
@@ -2986,7 +3110,7 @@
                             <p>Side-by-side spec comparison tool for evaluating camera resolutions and features.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 113026.png" alt="Shopping Cart & Enquiry" class="screenshot-img">
                         </div>
@@ -2995,7 +3119,7 @@
                             <p>Itemized selection with dynamic price calculation and enquiry compilation.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 113308.png" alt="WhatsApp Chat Redirection" class="screenshot-img">
                         </div>
@@ -3004,7 +3128,7 @@
                             <p>Instant chat redirection populated with structured cart models for store query.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 113321.png" alt="Admin Authentication Portal" class="screenshot-img">
                         </div>
@@ -3013,7 +3137,7 @@
                             <p>Credential validation gate protecting access to merchant inventory management.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 113347.png" alt="Admin Dashboard Overview" class="screenshot-img">
                         </div>
@@ -3022,7 +3146,7 @@
                             <p>Secure control center displaying inventory stats and catalog options.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 113357.png" alt="Admin Product Inventory" class="screenshot-img">
                         </div>
@@ -3031,7 +3155,7 @@
                             <p>Add, edit, or archive operations directly linked to the application database.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 113405.png" alt="Admin Product Editor" class="screenshot-img">
                         </div>
@@ -3040,7 +3164,7 @@
                             <p>Granular form interface for tweaking individual camera configurations.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 113413.png" alt="Product Review Interface" class="screenshot-img">
                         </div>
@@ -3049,7 +3173,7 @@
                             <p>Interactive ratings system for logging verified user product evaluations.</p>
                         </div>
                     </div>
-                    <div class="screenshot-card">
+                    <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
                             <img src="assets/Screenshot 2026-06-05 113422.png" alt="Bundle Package Builder" class="screenshot-img">
                         </div>
@@ -3229,22 +3353,32 @@
 
                 <div class="neon-card cert-card">
                     <div class="cert-card-header">
-                        <span class="cert-icon-box">🎓</span>
-                        <span class="cert-status-badge status-progress">In Progress</span>
+                        <span class="cert-icon-box">🎨</span>
+                        <span class="cert-status-badge status-completed">Completed</span>
                     </div>
-                    <h3>[AWS Cloud Practitioner / Other Completed Certs]</h3>
-                    <p class="provider">Academic Curriculum / Self-Directed</p>
-                    <p style="font-size:0.95rem;">Placeholder card outlining planned certifications. e.g. AWS Cloud Practitioner, Meta Frontend Developer.</p>
+                    <h3>Responsive Web Design</h3>
+                    <p class="provider">freeCodeCamp</p>
+                    <p style="font-size:0.95rem;">HTML5, CSS3 layouts, responsive media queries, flexbox, grid layouts, and visual hierarchy standards.</p>
                 </div>
 
                 <div class="neon-card cert-card">
                     <div class="cert-card-header">
-                        <span class="cert-icon-box">💻</span>
-                        <span class="cert-status-badge status-planned">Planned</span>
+                        <span class="cert-icon-box">📊</span>
+                        <span class="cert-status-badge status-completed">Completed</span>
                     </div>
-                    <h3>Portfolio Project Completion</h3>
-                    <p class="provider">Self-Directed Development Milestone</p>
-                    <p style="font-size:0.95rem;">Deploying a production e-commerce model, managing raw inventory seed files, and verifying full-stack security loops.</p>
+                    <h3>SQL (Basic) Certificate</h3>
+                    <p class="provider">HackerRank</p>
+                    <p style="font-size:0.95rem;">Demonstrates proficiency in query construction, subqueries, relational database models, filters, and aggregations.</p>
+                </div>
+
+                <div class="neon-card cert-card">
+                    <div class="cert-card-header">
+                        <span class="cert-icon-box">☁️</span>
+                        <span class="cert-status-badge status-progress">In Progress</span>
+                    </div>
+                    <h3>AWS Cloud Practitioner</h3>
+                    <p class="provider">Amazon Web Services</p>
+                    <p style="font-size:0.95rem;">Studying cloud architecture concepts, key security models, computing pipelines, and scalable database deployments.</p>
                 </div>
             </div>
         </section>
@@ -3267,46 +3401,37 @@
                 
                 <div class="neon-card reflection-masonry-card">
                     <div class="reflection-card-number">01</div>
-                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">🧱 Starting from Zero is a Superpower</h4>
-                    <p>I had never built a full backend before this project. Starting from a blank Express server and watching it grow into a production-ready API with auth, CRUD, and database integration was a lesson in persistence.</p>
+                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">🤝 Collaborative Coding beats Solo Dev</h4>
+                    <p>Working in a team of five (Atharva, Ashutosh, Yashwant, Anoosha, and myself) taught me the value of delegation, alignment, and source control. Building different modules of the CCTV platform required clear interfaces and mutual trust.</p>
                     <div class="reflection-quote-block">
-                        <p>"Blank screens look intimidating, but they represent absolute architectural freedom."</p>
+                        <p>"Software engineering is a team sport; code is only as clean as the team's communication."</p>
                     </div>
                 </div>
 
                 <div class="neon-card reflection-masonry-card">
                     <div class="reflection-card-number">02</div>
-                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">📊 Real Data is Messy — Embrace It</h4>
-                    <p>The product catalog came as an Excel file with inconsistent formatting. Writing the migration script forced me to think like a data engineer, not just a frontend developer.</p>
+                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">🔌 Bridging Frontend & Backend Logic</h4>
+                    <p>Connecting React state flows to an Express backend was a massive learning loop. Understanding how database queries, middleware security gates, and REST controllers interact has shifted my perspective to system-level thinking.</p>
                     <div class="reflection-quote-block">
-                        <p>"Normalized data structures don't arrive in spreadsheets; they are forged in raw parser routines."</p>
+                        <p>"An interface is just a window; the real magic happens in the data pipeline behind it."</p>
                     </div>
                 </div>
 
                 <div class="neon-card reflection-masonry-card">
                     <div class="reflection-card-number">03</div>
-                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">🔒 Security is Non-Negotiable</h4>
-                    <p>Learning authentication and request protection made me realize how much goes into keeping user data safe. Middleware, token validation, and access rules are not optional extras.</p>
+                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">💾 Seeding Workflows & Database Sync</h4>
+                    <p>Managing product seeding files containing over 400 lines of CCTV catalog components forced me to learn schema normalization, migration safety, and how to verify backend database connections early on.</p>
                     <div class="reflection-quote-block">
-                        <p>"If an API endpoint isn't verified dynamically, the database isn't yours."</p>
-                    </div>
-                </div>
-
-                <div class="neon-card reflection-masonry-card">
-                    <div class="reflection-card-number">04</div>
-                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">📱 Mobile-First is a Mindset, Not an Afterthought</h4>
-                    <p>I redesigned the navbar twice because it didn't work on mobile. That lesson taught me to always prototype mobile-first.</p>
-                    <div class="reflection-quote-block">
-                        <p>"User experience doesn't sit on a wide desktop; it travels with the client on portable viewports."</p>
+                        <p>"Design schemas for tomorrow's queries, but parse files for today's database seeds."</p>
                     </div>
                 </div>
 
                 <div class="neon-card reflection-masonry-card" style="grid-column: span 2;">
-                    <div class="reflection-card-number">05</div>
-                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">🚀 Ship, Then Improve</h4>
-                    <p>The first version of the admin portal was ugly and barely functional. But it worked. Iterating on a working product is a completely different (and better) process than trying to design perfection upfront.</p>
+                    <div class="reflection-card-number">04</div>
+                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">⏱️ Agile Sprints & Incremental Slices</h4>
+                    <p>Splitting our work into Sprints made the project highly manageable. We learned to ship incremental working features, debug them in parallel, and continuously review progress together during team standups.</p>
                     <div class="reflection-quote-block">
-                        <p>"Functional code running in production teaches far more than a perfect layout design collecting dust in a drawer."</p>
+                        <p>"Sprints divide complex backlogs into measurable checkpoints of working software."</p>
                     </div>
                 </div>
 
@@ -3623,7 +3748,39 @@
         }
 
         animateBgCanvas();
+
+        /* =========================================
+           6. INTERACTIVE SCREENSHOT LIGHTBOX
+           ========================================= */
+        window.openLightbox = function(element) {
+            const lightbox = document.getElementById('image-lightbox');
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            
+            const cardImg = element.querySelector('.screenshot-img');
+            const cardTitle = element.querySelector('.screenshot-info h5').innerText;
+            const cardDesc = element.querySelector('.screenshot-info p').innerText;
+
+            img.src = cardImg.src;
+            caption.innerHTML = `<span style="color:var(--accent-cyan); font-weight:700;">${cardTitle}</span> &middot; <span style="color:var(--text-secondary); font-size:1rem;">${cardDesc}</span>`;
+            
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Disable background scrolling
+        }
+
+        window.closeLightbox = function() {
+            const lightbox = document.getElementById('image-lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
     </script>
+
+    <!-- Lightbox Modal -->
+    <div id="image-lightbox" class="lightbox-modal" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged screenshot view">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
 </body>
 </html>
 
