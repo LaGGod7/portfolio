@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goureesh N Doddamani | Engineering Portfolio</title>
-    <meta name="description" content="Academic and project portfolio of Goureesh N Doddamani, Computer Science engineering student.">
-    
+    <meta name="description"
+        content="Academic and project portfolio of Goureesh N Doddamani, Computer Science engineering student.">
+
     <!-- Google Fonts: Syne (Futuristic wide headings) and DM Sans (Polished body text) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <style>
         /* -----------------------------------------
            1. DESIGN SYSTEM & CUSTOM PROPERTIES
@@ -22,18 +26,18 @@
             --bg-navbar: rgba(10, 15, 30, 0.85);
             --border-color: rgba(0, 212, 255, 0.1);
             --border-glow: rgba(0, 212, 255, 0.25);
-            
+
             --accent-cyan: #00D4FF;
             --accent-orange: #FF6B35;
             --accent-lime: #7FFF00;
-            
+
             --text-primary: #FFFFFF;
             --text-secondary: #9EAFC8;
             --text-muted: #62748F;
-            
+
             --font-heading: 'Syne', sans-serif;
             --font-body: 'DM Sans', sans-serif;
-            
+
             --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
             --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -61,7 +65,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: 
+            background-image:
                 radial-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
                 linear-gradient(45deg, rgba(10, 15, 30, 0.1) 25%, transparent 25%, transparent 75%, rgba(10, 15, 30, 0.1) 75%, rgba(10, 15, 30, 0.1) 100%);
             background-size: 30px 30px, 120px 120px;
@@ -92,14 +96,17 @@
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
             background: var(--bg-base);
         }
+
         ::-webkit-scrollbar-thumb {
             background: var(--bg-card);
             border: 2px solid var(--bg-base);
             border-radius: 4px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent-cyan);
         }
@@ -107,7 +114,12 @@
         /* -----------------------------------------
            3. TYPOGRAPHY & HEADINGS STYLE
            ----------------------------------------- */
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: var(--font-heading);
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -177,7 +189,7 @@
 
         .header-nav.scrolled {
             height: 70px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .nav-wrapper {
@@ -234,7 +246,8 @@
             cursor: pointer;
         }
 
-        .nav-link:hover, .nav-link.active {
+        .nav-link:hover,
+        .nav-link.active {
             color: var(--accent-cyan);
         }
 
@@ -250,7 +263,8 @@
             transition: width var(--transition-fast);
         }
 
-        .nav-link.active::after, .nav-link:hover::after {
+        .nav-link.active::after,
+        .nav-link:hover::after {
             width: 100%;
         }
 
@@ -268,7 +282,7 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             width: 230px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
@@ -439,6 +453,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -501,8 +516,15 @@
         }
 
         @keyframes navPulse {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(3); opacity: 0; }
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
         }
 
         .greeting-text {
@@ -570,7 +592,7 @@
             border-radius: 16px;
             padding: 1.8rem;
             text-align: center;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
             transition: border-color var(--transition-fast);
         }
 
@@ -652,7 +674,7 @@
         .project-quick-preview-image {
             width: 100%;
             height: 250px;
-            background-color: rgba(0,0,0,0.3);
+            background-color: rgba(0, 0, 0, 0.3);
             border: 1px dashed var(--border-color);
             border-radius: 12px;
             display: flex;
@@ -708,7 +730,9 @@
         }
 
         @keyframes spinCircle {
-            100% { transform: rotate(360deg); }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .avatar-caption-note {
@@ -969,15 +993,18 @@
             gap: 1.5rem;
             margin: 1.5rem 0;
         }
+
         @media (max-width: 992px) {
             .learning-example-grid {
                 grid-template-columns: 1fr;
             }
         }
+
         .learning-code-box {
             margin: 0 !important;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
+
         .learning-output-box {
             background-color: #0c0f1d;
             border: 1px solid var(--border-color);
@@ -985,12 +1012,13 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
+
         .learning-output-header {
             height: 40px;
             background-color: #050811;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
             padding: 0 1rem;
@@ -1001,6 +1029,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
+
         .learning-output-body {
             padding: 1.5rem;
             flex-grow: 1;
@@ -1014,16 +1043,18 @@
             justify-content: center;
             min-height: 180px;
         }
+
         .learning-image-container {
             margin-top: 1.5rem;
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border-color);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
             background: #ffffff;
             padding: 0.5rem;
             text-align: center;
         }
+
         .learning-image-title {
             font-size: 0.85rem;
             font-weight: 700;
@@ -1032,11 +1063,13 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
+
         .learning-image-caption {
             font-size: 0.8rem;
             color: var(--text-muted);
             margin-bottom: 0.5rem;
         }
+
         .learning-img {
             width: 100%;
             height: auto;
@@ -1044,9 +1077,9 @@
             object-fit: contain;
             border-radius: 8px;
             background: #0f172a;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         /* Interactive Output Elements styling */
         .live-preview-card {
             background: rgba(255, 255, 255, 0.03);
@@ -1060,10 +1093,12 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
+
         .live-preview-card:hover {
             transform: translateY(-5px);
             border-color: #00D4FF;
         }
+
         .live-preview-avatar {
             width: 70px;
             height: 70px;
@@ -1077,6 +1112,7 @@
             font-size: 1.5rem;
             color: #0A0F1E;
         }
+
         .live-preview-name {
             font-size: 1.1rem;
             font-weight: 700;
@@ -1084,6 +1120,7 @@
             margin-bottom: 0.3rem;
             font-family: Georgia, serif;
         }
+
         .live-preview-role {
             font-size: 0.8rem;
             color: #00d4ff;
@@ -1092,12 +1129,14 @@
             font-weight: 700;
             margin-bottom: 0.8rem;
         }
+
         .live-preview-badge-group {
             display: flex;
             justify-content: center;
             gap: 0.4rem;
             flex-wrap: wrap;
         }
+
         .live-preview-badge {
             background: rgba(0, 212, 255, 0.1);
             border: 1px solid rgba(0, 212, 255, 0.2);
@@ -1107,11 +1146,11 @@
             border-radius: 4px;
             font-weight: 600;
         }
-        
+
         /* JS Output Interactive Elements */
         .js-output-console {
             background-color: #050811;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             padding: 1rem;
             width: 100%;
@@ -1120,16 +1159,20 @@
             color: #a855f7;
             text-align: left;
         }
+
         .console-line {
             margin-bottom: 0.4rem;
             color: #38bdf8;
         }
+
         .console-line-success {
             color: #4ade80;
         }
+
         .console-line-info {
             color: #fb7185;
         }
+
         .js-run-btn {
             background: linear-gradient(135deg, #1d5f9f 0%, #b7791f 100%);
             border: none;
@@ -1145,19 +1188,22 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
+
         .js-run-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(29, 95, 159, 0.4);
         }
+
         .js-run-btn:active {
             transform: translateY(0);
         }
-        
+
         /* React Counter Interactive Elements */
         .react-counter-container {
             text-align: center;
             width: 100%;
         }
+
         .react-counter-val {
             font-size: 2.5rem;
             font-weight: 800;
@@ -1165,14 +1211,16 @@
             margin: 0.5rem 0 1rem;
             font-family: var(--font-heading);
         }
+
         .react-counter-btn-row {
             display: flex;
             justify-content: center;
             gap: 0.8rem;
         }
+
         .react-counter-btn {
             background: transparent;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             color: #ffffff;
             width: 38px;
             height: 38px;
@@ -1185,6 +1233,7 @@
             justify-content: center;
             transition: all 0.2s ease;
         }
+
         .react-counter-btn:hover {
             border-color: #00d4ff;
             color: #00d4ff;
@@ -1407,7 +1456,7 @@
             object-fit: contain;
             background: #fff;
             border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             margin-bottom: 1rem;
         }
 
@@ -1468,7 +1517,7 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             margin: 2rem 0 4rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .glass-table {
@@ -1477,7 +1526,8 @@
             text-align: left;
         }
 
-        .glass-table th, .glass-table td {
+        .glass-table th,
+        .glass-table td {
             padding: 1.1rem 1.5rem;
         }
 
@@ -1511,9 +1561,23 @@
             text-transform: uppercase;
         }
 
-        .priority-high { background-color: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.2); }
-        .priority-medium { background-color: rgba(255, 107, 53, 0.15); color: #ff6b35; border: 1px solid rgba(255,107,53,0.2); }
-        .priority-low { background-color: rgba(0, 212, 255, 0.15); color: #00d4ff; border: 1px solid rgba(0,212,255,0.2); }
+        .priority-high {
+            background-color: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .priority-medium {
+            background-color: rgba(255, 107, 53, 0.15);
+            color: #ff6b35;
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .priority-low {
+            background-color: rgba(0, 212, 255, 0.15);
+            color: #00d4ff;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
 
         /* -----------------------------------------
            13. SYSTEM DESIGN PAGE LAYOUT
@@ -1605,14 +1669,14 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
             margin: 2.5rem 0 4rem;
         }
 
         .editor-header-bar {
             height: 40px;
             background-color: #0c0f1d;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
             padding: 0 1rem;
@@ -1630,9 +1694,17 @@
             border-radius: 50%;
         }
 
-        .dot-red { background-color: #ef4444; }
-        .dot-yellow { background-color: #f59e0b; }
-        .dot-green { background-color: #10b981; }
+        .dot-red {
+            background-color: #ef4444;
+        }
+
+        .dot-yellow {
+            background-color: #f59e0b;
+        }
+
+        .dot-green {
+            background-color: #10b981;
+        }
 
         .editor-title {
             position: absolute;
@@ -1656,11 +1728,27 @@
         }
 
         /* Code colors */
-        .c-kw { color: var(--accent-orange); font-weight: bold; }
-        .c-vr { color: var(--accent-cyan); }
-        .c-fn { color: #facc15; }
-        .c-st { color: var(--accent-lime); }
-        .c-cm { color: var(--text-muted); font-style: italic; }
+        .c-kw {
+            color: var(--accent-orange);
+            font-weight: bold;
+        }
+
+        .c-vr {
+            color: var(--accent-cyan);
+        }
+
+        .c-fn {
+            color: #facc15;
+        }
+
+        .c-st {
+            color: var(--accent-lime);
+        }
+
+        .c-cm {
+            color: var(--text-muted);
+            font-style: italic;
+        }
 
         /* -----------------------------------------
            15. TESTING PAGE LAYOUT
@@ -1720,13 +1808,13 @@
         .status-completed {
             background-color: rgba(127, 255, 0, 0.12);
             color: var(--accent-lime);
-            border: 1px solid rgba(127,255,0,0.25);
+            border: 1px solid rgba(127, 255, 0, 0.25);
         }
 
         .status-progress {
             background-color: rgba(255, 107, 53, 0.12);
             color: var(--accent-orange);
-            border: 1px solid rgba(255,107,53,0.25);
+            border: 1px solid rgba(255, 107, 53, 0.25);
         }
 
         .status-planned {
@@ -1869,7 +1957,7 @@
             visibility: hidden;
             transform: translateY(10px);
             transition: all var(--transition-fast);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
         }
 
         .back-to-top-widget.visible {
@@ -1941,7 +2029,7 @@
                 visibility: hidden;
                 transform: translateY(-20px);
                 transition: all var(--transition-smooth);
-                box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             }
 
             .menu-list.mobile-open {
@@ -1955,7 +2043,7 @@
                 transform: none;
                 width: 100%;
                 box-shadow: none;
-                background-color: rgba(255,255,255,0.01);
+                background-color: rgba(255, 255, 255, 0.01);
                 border: none;
                 border-left: 2px solid var(--accent-cyan);
                 border-radius: 0;
@@ -2020,6 +2108,7 @@
                 grid-template-columns: 1fr;
             }
         }
+
         /* -----------------------------------------
            PROFESSIONAL PORTFOLIO POLISH
            ----------------------------------------- */
@@ -2204,9 +2293,11 @@
         .screenshot-image-wrapper {
             position: relative;
             width: 100%;
-            padding-top: 56.25%; /* 16:9 aspect ratio */
+            padding-top: 56.25%;
+            /* 16:9 aspect ratio */
             overflow: hidden;
-            background-color: #0b192c; /* fallback dark bg */
+            background-color: #0b192c;
+            /* fallback dark bg */
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -2251,6 +2342,7 @@
             gap: 0.8rem;
             margin-top: 0.5rem;
         }
+
         .team-pill {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -2265,11 +2357,13 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             transition: all var(--transition-fast);
         }
+
         .team-pill:hover {
             border-color: var(--accent-orange);
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(255, 107, 53, 0.15);
         }
+
         .team-role-lead {
             font-size: 0.75rem;
             text-transform: uppercase;
@@ -2354,6 +2448,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Live Circuit Canvas -->
     <canvas id="circuit-canvas"></canvas>
@@ -2365,24 +2460,30 @@
                 <div class="logo-box">G</div>
                 <span>Goureesh</span>
             </a>
-            
+
             <nav>
                 <ul class="menu-list" id="nav-menu">
                     <li class="menu-item"><a href="#home" class="nav-link" id="link-home">Home</a></li>
                     <li class="menu-item"><a href="#about" class="nav-link" id="link-about">About Me</a></li>
                     <li class="menu-item"><a href="#learning" class="nav-link" id="link-learning">Learning</a></li>
                     <li class="menu-item dropdown">
-                        <a href="#project-overview" class="nav-link" id="project-dropdown-trigger">Project <span style="font-size:0.8rem">▼</span></a>
+                        <a href="#project-overview" class="nav-link" id="project-dropdown-trigger">Project <span
+                                style="font-size:0.8rem">▼</span></a>
                         <div class="dropdown-menu">
-                            <a href="#project-overview" class="dropdown-item" id="link-project-overview">Project Overview</a>
-                            <a href="#project-analysis" class="dropdown-item" id="link-project-analysis">Analysis & Requirements</a>
+                            <a href="#project-overview" class="dropdown-item" id="link-project-overview">Project
+                                Overview</a>
+                            <a href="#project-analysis" class="dropdown-item" id="link-project-analysis">Analysis &
+                                Requirements</a>
                             <a href="#project-design" class="dropdown-item" id="link-project-design">System Design</a>
-                            <a href="#project-implementation" class="dropdown-item" id="link-project-implementation">Implementation</a>
+                            <a href="#project-implementation" class="dropdown-item"
+                                id="link-project-implementation">Implementation</a>
                             <a href="#project-testing" class="dropdown-item" id="link-project-testing">Testing</a>
                         </div>
                     </li>
-                    <li class="menu-item"><a href="#certification" class="nav-link" id="link-certification">Certification</a></li>
-                    <li class="menu-item"><a href="#reflections" class="nav-link" id="link-reflections">Reflections</a></li>
+                    <li class="menu-item"><a href="#certification" class="nav-link"
+                            id="link-certification">Certification</a></li>
+                    <li class="menu-item"><a href="#reflections" class="nav-link" id="link-reflections">Reflections</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -2408,26 +2509,31 @@
                 </div>
 
                 <img src="assets/profile-photo.jpeg" alt="Portrait of Goureesh N Doddamani" class="hero-profile-photo">
-                
+
                 <span class="greeting-text">Hi, I'm</span>
                 <h1 class="main-fullname"><span class="gradient-text">Goureesh N Doddamani</span></h1>
-                
+
                 <h3 class="hero-subtitle-details">CS Engineering Student · Builder · Problem Solver</h3>
-                
+
                 <div class="hero-college-badge">
                     KLE Technological University, Hubbali | 4th Semester | Computer Science
                 </div>
-                
+
                 <p class="hero-pitch-paragraph">
-                    I build things that work — from full-stack e-commerce platforms to real-time security dashboards. Currently in my 4th semester of BTech CS, turning classroom concepts into real deployable products.
+                    I build things that work — from full-stack e-commerce platforms to real-time security dashboards.
+                    Currently in my 4th semester of BTech CS, turning classroom concepts into real deployable products.
                 </p>
-                
+
                 <div class="hero-actions-container">
                     <a href="#about" class="btn-pill btn-gradient" onclick="navigateTo('about')">
                         <span>About Me</span>
-                        <svg class="btn-arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+                        <svg class="btn-arrow-svg" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                        </svg>
                     </a>
-                    <a href="#learning" class="btn-pill btn-outline" onclick="navigateTo('learning')">Learning Journey</a>
+                    <a href="#learning" class="btn-pill btn-outline" onclick="navigateTo('learning')">Learning
+                        Journey</a>
                 </div>
             </div>
 
@@ -2462,34 +2568,39 @@
                 <span class="subtitle">My Story</span>
                 <h2>About Me</h2>
             </div>
-            
+
             <div class="about-main-flex">
                 <div class="neon-card">
-                    <img src="assets/profile-photo.jpeg" alt="Portrait of Goureesh N Doddamani" class="profile-photo-card">
-                    
+                    <img src="assets/profile-photo.jpeg" alt="Portrait of Goureesh N Doddamani"
+                        class="profile-photo-card">
+
                     <div class="about-summary-block">
                         <h3>Goureesh N Doddamani</h3>
                         <p>BTech Computer Science</p>
                     </div>
-                    
+
                     <ul class="business-list">
                         <li><strong>College:</strong> KLE Technological University, Hubbali</li>
                         <li><strong>Semester:</strong> 4th BTech</li>
                         <li><strong>Branch:</strong> Computer Science & Engineering</li>
                     </ul>
                 </div>
-                
+
                 <div class="about-narrative-right">
                     <p class="bio-text-para">
-                        I'm Goureesh N Doddamani, a 4th-semester Computer Science student at KLE Technological University, Hubbali. I'm passionate about building software that solves real problems.
+                        I'm Goureesh N Doddamani, a 4th-semester Computer Science student at KLE Technological
+                        University, Hubbali. I'm passionate about building software that solves real problems.
                     </p>
                     <p class="bio-text-para">
-                        I enjoy working across frontend interfaces, backend logic, system architecture, and clean documentation. I use this portfolio to show who I am, how I learn, and the work I build through separate project pages.
+                        I enjoy working across frontend interfaces, backend logic, system architecture, and clean
+                        documentation. I use this portfolio to show who I am, how I learn, and the work I build through
+                        separate project pages.
                     </p>
-                    
+
                     <!-- Interests -->
                     <div style="margin: 2rem 0;">
-                        <h4 style="font-size:1.25rem; margin-bottom:1rem; color:var(--accent-cyan);">Core Technical Interests</h4>
+                        <h4 style="font-size:1.25rem; margin-bottom:1rem; color:var(--accent-cyan);">Core Technical
+                            Interests</h4>
                         <div class="pills-group">
                             <span class="tech-pill-badge">Full-Stack Development</span>
                             <span class="tech-pill-badge">UI/UX Design</span>
@@ -2501,9 +2612,11 @@
 
                     <!-- Project Development Team -->
                     <div style="margin: 2rem 0;">
-                        <h4 style="font-size:1.25rem; margin-bottom:1rem; color:var(--accent-orange);">Project Collaboration Team</h4>
+                        <h4 style="font-size:1.25rem; margin-bottom:1rem; color:var(--accent-orange);">Project
+                            Collaboration Team</h4>
                         <p style="font-size:0.95rem; color:var(--text-secondary); margin-bottom:1rem;">
-                            Collaborating with peer builders to design, construct, and deploy real-world technical solutions:
+                            Collaborating with peer builders to design, construct, and deploy real-world technical
+                            solutions:
                         </p>
                         <div class="team-pills-group">
                             <span class="team-pill">Goureesh N Doddamani</span>
@@ -2519,7 +2632,7 @@
             <!-- Skills Category Blocks -->
             <div class="skills-section-block">
                 <h3 class="skills-block-title">Skills Inventory</h3>
-                
+
                 <div class="skills-asym-grid">
                     <div class="neon-card skill-badge-category">
                         <h4>Frontend Technologies</h4>
@@ -2533,7 +2646,7 @@
                             <span class="skill-individual-badge">React Router</span>
                         </div>
                     </div>
-                    
+
                     <div class="neon-card skill-badge-category">
                         <h4>Backend & Databases</h4>
                         <div class="skill-pill-container">
@@ -2573,14 +2686,15 @@
             <!-- Education Timeline -->
             <div class="skills-section-block">
                 <h3 class="skills-block-title">Education Journey</h3>
-                
+
                 <div class="edu-timeline-box">
                     <div class="edu-node">
                         <div class="edu-node-bullet"></div>
                         <h4 class="edu-node-title">BTech in Computer Science & Engineering</h4>
                         <div class="edu-node-subtitle">KLE Technological University, Hubbali</div>
                         <div class="edu-node-date">2024 - Present (4th Semester)</div>
-                        <p>Focusing on Data Structures, Algorithms, Database Systems, Computer Organization, and Software Design methodologies.</p>
+                        <p>Focusing on Data Structures, Algorithms, Database Systems, Computer Organization, and
+                            Software Design methodologies.</p>
                     </div>
 
                     <div class="edu-node">
@@ -2588,7 +2702,8 @@
                         <h4 class="edu-node-title">Pre-University Course (PUC)</h4>
                         <div class="edu-node-subtitle">Chetan College</div>
                         <div class="edu-node-date">2022 - 2024</div>
-                        <p>Specialization in PCMB / PCMC. Foundation coursework in mathematics, physics, and basic programming frameworks.</p>
+                        <p>Specialization in PCMB / PCMC. Foundation coursework in mathematics, physics, and basic
+                            programming frameworks.</p>
                     </div>
                 </div>
             </div>
@@ -2603,31 +2718,40 @@
                 <span class="subtitle">Academic Growth</span>
                 <h2>Learning Journey</h2>
             </div>
-            
+
             <p class="learning-intro-para">
-                My learning journey combines formal university coursework with self-driven practice. I focus on turning concepts into clean interfaces, reliable logic, and well-documented systems.
+                My learning journey combines formal university coursework with self-driven practice. I focus on turning
+                concepts into clean interfaces, reliable logic, and well-documented systems.
             </p>
 
             <div class="learning-panel-column">
-                
+
                 <!-- Tab 3a -->
                 <div class="expandable-panel" id="panel-a">
                     <div class="panel-header" onclick="togglePanel('a')">
                         <div class="panel-header-title-box">
                             <div class="panel-icon-sphere">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                                </svg>
                             </div>
                             <h3>a. HTML & CSS</h3>
                         </div>
-                        <svg class="panel-toggle-indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="panel-toggle-indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                     </div>
-                    
+
                     <div class="panel-body-content">
                         <ul class="learning-items-list">
                             <li>Mastered semantic layout tags ensuring accessible DOM mapping.</li>
-                            <li>Engineered highly dynamic CSS architectures utilizing structured variable maps (`--accent`, `--color-bg`).</li>
+                            <li>Engineered highly dynamic CSS architectures utilizing structured variable maps
+                                (`--accent`, `--color-bg`).</li>
                             <li>Authored fluid layout grids using advanced CSS Flexbox and Grid equations.</li>
-                            <li><strong>Applied in:</strong> Clean page layouts, responsive navigation patterns, and reusable interface sections.</li>
+                            <li><strong>Applied in:</strong> Clean page layouts, responsive navigation patterns, and
+                                reusable interface sections.</li>
                         </ul>
 
                         <div class="learning-example-grid">
@@ -2673,12 +2797,14 @@
                         <div class="learning-image-container">
                             <img src="assets/html_css_mockup.png" alt="HTML and CSS visual mockup" class="learning-img">
                             <div class="learning-image-title">UI Design Reference Prototype</div>
-                            <div class="learning-image-caption">Fidelity prototype representing component alignment, visual grids, and color spacing before implementation.</div>
+                            <div class="learning-image-caption">Fidelity prototype representing component alignment,
+                                visual grids, and color spacing before implementation.</div>
                         </div>
-                        
+
                         <div class="panel-takeaway-card">
                             <h5>Key Lesson</h5>
-                            <blockquote>"A well-structured CSS variable system saved me hours when redesigning the storefront."</blockquote>
+                            <blockquote>"A well-structured CSS variable system saved me hours when redesigning the
+                                storefront."</blockquote>
                         </div>
                     </div>
                 </div>
@@ -2688,19 +2814,27 @@
                     <div class="panel-header" onclick="togglePanel('b')">
                         <div class="panel-header-title-box">
                             <div class="panel-icon-sphere">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
                             </div>
                             <h3>b. JavaScript</h3>
                         </div>
-                        <svg class="panel-toggle-indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="panel-toggle-indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                     </div>
-                    
+
                     <div class="panel-body-content">
                         <ul class="learning-items-list">
-                            <li>Advanced ES6+ paradigms: closure structures, array computations, map/filter algorithms.</li>
+                            <li>Advanced ES6+ paradigms: closure structures, array computations, map/filter algorithms.
+                            </li>
                             <li>Asynchronous operations: Event loop cycles, promises, and optimized fetch models.</li>
                             <li>Virtual representation: Custom schematic solver equations.</li>
-                            <li><strong>Applied in:</strong> Browser storage practice, filtering logic, and structured client-side routing.</li>
+                            <li><strong>Applied in:</strong> Browser storage practice, filtering logic, and structured
+                                client-side routing.</li>
                         </ul>
 
                         <div class="learning-example-grid">
@@ -2714,7 +2848,8 @@
                                     </div>
                                     <span class="editor-title">FilterEngine.js</span>
                                 </div>
-                                <pre class="editor-pre-content"><code class="editor-code-body"><span class="c-kw">const</span> <span class="c-vr">team</span> = [
+                                <pre
+                                    class="editor-pre-content"><code class="editor-code-body"><span class="c-kw">const</span> <span class="c-vr">team</span> = [
   { <span class="c-vr">name</span>: <span class="c-st">'Goureesh'</span>, <span class="c-vr">role</span>: <span class="c-st">'Lead'</span> },
   { <span class="c-vr">name</span>: <span class="c-st">'Atharva'</span>, <span class="c-vr">role</span>: <span class="c-st">'Sys'</span> }
 ];
@@ -2731,7 +2866,8 @@
                                 <div class="learning-output-header">Live Output Console</div>
                                 <div class="learning-output-body" style="flex-direction: column;">
                                     <div class="js-output-console" id="js-console-output">
-                                        <div style="color: var(--text-muted); font-style: italic;">Console ready. Click button below to run script.</div>
+                                        <div style="color: var(--text-muted); font-style: italic;">Console ready. Click
+                                            button below to run script.</div>
                                     </div>
                                     <button class="js-run-btn" onclick="runJavaScriptDemo()">Execute Script</button>
                                 </div>
@@ -2740,14 +2876,17 @@
 
                         <!-- Generated Mockup Image -->
                         <div class="learning-image-container">
-                            <img src="assets/js_logic_mockup.png" alt="JavaScript dynamic logic mockup" class="learning-img">
+                            <img src="assets/js_logic_mockup.png" alt="JavaScript dynamic logic mockup"
+                                class="learning-img">
                             <div class="learning-image-title">Runtime Pipeline & Event Loop</div>
-                            <div class="learning-image-caption">Visualization of standard async operations, processing callback tasks inside browser schedules.</div>
+                            <div class="learning-image-caption">Visualization of standard async operations, processing
+                                callback tasks inside browser schedules.</div>
                         </div>
-                        
+
                         <div class="panel-takeaway-card">
                             <h5>Key Lesson</h5>
-                            <blockquote>"Writing the product filter from scratch (instead of using a library) deepened my understanding of array methods enormously."</blockquote>
+                            <blockquote>"Writing the product filter from scratch (instead of using a library) deepened
+                                my understanding of array methods enormously."</blockquote>
                         </div>
                     </div>
                 </div>
@@ -2757,20 +2896,26 @@
                     <div class="panel-header" onclick="togglePanel('c')">
                         <div class="panel-header-title-box">
                             <div class="panel-icon-sphere">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
                             </div>
                             <h3>c. Node.js & React</h3>
                         </div>
-                        <svg class="panel-toggle-indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="panel-toggle-indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                     </div>
-                    
+
                     <div class="panel-body-content">
                         <ul class="learning-items-list">
                             <li>Modular components, state orchestration, custom state hooks, and routing handlers.</li>
                             <li>REST API creation with Express routing, active middleware, and controller setups.</li>
                             <li>Database connectors using ORM patterns and secure cloud storage concepts.</li>
                             <li>OAuth frameworks and secure cookie-based session stores.</li>
-                            <li><strong>Applied in:</strong> Full-stack exercises that connect interface state, API routes, and database-backed records.</li>
+                            <li><strong>Applied in:</strong> Full-stack exercises that connect interface state, API
+                                routes, and database-backed records.</li>
                         </ul>
 
                         <div class="learning-example-grid">
@@ -2802,11 +2947,15 @@
                                 <div class="learning-output-header">Live Rendered Component</div>
                                 <div class="learning-output-body">
                                     <div class="react-counter-container">
-                                        <div style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-orange); font-weight:700; letter-spacing:0.05em; margin-bottom:0.2rem;">React State Hook</div>
+                                        <div
+                                            style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-orange); font-weight:700; letter-spacing:0.05em; margin-bottom:0.2rem;">
+                                            React State Hook</div>
                                         <div class="react-counter-val" id="react-counter-val">0</div>
                                         <div class="react-counter-btn-row">
-                                            <button class="react-counter-btn" onclick="decrementReactCounter()">-</button>
-                                            <button class="react-counter-btn" onclick="incrementReactCounter()">+</button>
+                                            <button class="react-counter-btn"
+                                                onclick="decrementReactCounter()">-</button>
+                                            <button class="react-counter-btn"
+                                                onclick="incrementReactCounter()">+</button>
                                         </div>
                                     </div>
                                 </div>
@@ -2815,14 +2964,18 @@
 
                         <!-- Generated Mockup Image -->
                         <div class="learning-image-container">
-                            <img src="assets/react_node_mockup.png" alt="React components and Node route map" class="learning-img">
+                            <img src="assets/react_node_mockup.png" alt="React components and Node route map"
+                                class="learning-img">
                             <div class="learning-image-title">Fullstack Components & Routing</div>
-                            <div class="learning-image-caption">Architectural diagram detailing component states syncing with server routing controllers and backend structures.</div>
+                            <div class="learning-image-caption">Architectural diagram detailing component states syncing
+                                with server routing controllers and backend structures.</div>
                         </div>
-                        
+
                         <div class="panel-takeaway-card">
                             <h5>Key Lesson</h5>
-                            <blockquote>"Integrating server state caching with React Query completely simplified handling asynchronous state synchronization between my client and backend API."</blockquote>
+                            <blockquote>"Integrating server state caching with React Query completely simplified
+                                handling asynchronous state synchronization between my client and backend API."
+                            </blockquote>
                         </div>
                     </div>
                 </div>
@@ -2832,24 +2985,35 @@
                     <div class="panel-header" onclick="togglePanel('d')">
                         <div class="panel-header-title-box">
                             <div class="panel-icon-sphere">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                </svg>
                             </div>
                             <h3>d. Structured Enquiry</h3>
                         </div>
-                        <svg class="panel-toggle-indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="panel-toggle-indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                     </div>
-                    
+
                     <div class="panel-body-content">
                         <ul class="learning-items-list">
-                            <li>Requirement discovery: Practiced turning real user needs into structured software workflows.</li>
-                            <li>Data organization: Practiced converting raw, inconsistent records into clean structured formats.</li>
+                            <li>Requirement discovery: Practiced turning real user needs into structured software
+                                workflows.</li>
+                            <li>Data organization: Practiced converting raw, inconsistent records into clean structured
+                                formats.</li>
                             <li>Systems design: Modeled database relationships, entity maps, and testing protocols.</li>
-                            <li><strong>Applied in:</strong> Writing clearer requirements, diagrams, and testing notes for technical work.</li>
+                            <li><strong>Applied in:</strong> Writing clearer requirements, diagrams, and testing notes
+                                for technical work.</li>
                         </ul>
-                        
+
                         <div class="panel-takeaway-card">
                             <h5>Key Lesson</h5>
-                            <blockquote>"Bridging real physical catalog workflows with visual database schemes showed me how crucial upfront structural design is before code writing."</blockquote>
+                            <blockquote>"Bridging real physical catalog workflows with visual database schemes showed me
+                                how crucial upfront structural design is before code writing."</blockquote>
                         </div>
                     </div>
                 </div>
@@ -2865,7 +3029,7 @@
             <div class="project-detail-hero">
                 <h3>Digitron Associates</h3>
                 <div class="tagline">CCTV & Security Solutions — Full-Stack E-Commerce Platform</div>
-                
+
                 <div class="pills-group" style="justify-content:center;">
                     <span class="tech-pill-badge" style="border-color:var(--accent-cyan)">React</span>
                     <span class="tech-pill-badge" style="border-color:var(--accent-cyan)">Vite</span>
@@ -2878,12 +3042,26 @@
 
                 <!-- Project Links Row -->
                 <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;">
-                    <a href="https://digitron-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-pill btn-gradient" id="btn-live-demo" style="font-size:0.95rem; padding:0.75rem 1.8rem;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    <a href="https://digitronx-ifcsnmvso-goureesh-s-projects.vercel.app/" target="_blank"
+                        rel="noopener noreferrer" class="btn-pill btn-gradient" id="btn-live-demo"
+                        style="font-size:0.95rem; padding:0.75rem 1.8rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
                         <span>View Live Demo</span>
                     </a>
-                    <a href="https://github.com/LaGGod7/Digitron" target="_blank" rel="noopener noreferrer" class="btn-pill btn-outline" id="btn-github-repo" style="font-size:0.95rem; padding:0.75rem 1.8rem;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <a href="https://github.com/LaGGod7/Digitron" target="_blank" rel="noopener noreferrer"
+                        class="btn-pill btn-outline" id="btn-github-repo"
+                        style="font-size:0.95rem; padding:0.75rem 1.8rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
                         <span>GitHub Repository</span>
                     </a>
                 </div>
@@ -2897,17 +3075,24 @@
                         <span class="subtitle">Overview</span>
                         <h2>What is Digitron Associates?</h2>
                     </div>
-                    
+
                     <p class="bio-text-para">
-                        <strong>Digitron Associates</strong> is a real-world e-commerce web application built for a CCTV and security solutions business based in Hubbali, Karnataka. The platform enables customers to browse 400+ security products across 12 categories, compare models, build packages, and contact the store — while an admin portal allows the business owner to manage inventory, products, and site configuration.
+                        <strong>Digitron Associates</strong> is a real-world e-commerce web application built for a CCTV
+                        and security solutions business based in Hubbali, Karnataka. The platform enables customers to
+                        browse 400+ security products across 12 categories, compare models, build packages, and contact
+                        the store — while an admin portal allows the business owner to manage inventory, products, and
+                        site configuration.
                     </p>
 
-                    <h4 style="font-size:1.4rem; margin-top:2.5rem; margin-bottom:1rem; color:var(--accent-cyan)">Core System Capabilities</h4>
-                    
+                    <h4 style="font-size:1.4rem; margin-top:2.5rem; margin-bottom:1rem; color:var(--accent-cyan)">Core
+                        System Capabilities</h4>
+
                     <div class="core-features-bullet-list">
                         <div class="feature-bullet-item">
                             <div class="bullet-icon-sphere">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                             </div>
                             <div class="feature-bullet-text">
                                 <h5>400+ Catalog Items</h5>
@@ -2917,7 +3102,9 @@
 
                         <div class="feature-bullet-item">
                             <div class="bullet-icon-sphere">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                             </div>
                             <div class="feature-bullet-text">
                                 <h5>Detailed Specs & Star Ratings</h5>
@@ -2927,7 +3114,9 @@
 
                         <div class="feature-bullet-item">
                             <div class="bullet-icon-sphere">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                             </div>
                             <div class="feature-bullet-text">
                                 <h5>Bundle Package Builder</h5>
@@ -2937,7 +3126,9 @@
 
                         <div class="feature-bullet-item">
                             <div class="bullet-icon-sphere">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                             </div>
                             <div class="feature-bullet-text">
                                 <h5>Secure Merchant Center</h5>
@@ -2947,7 +3138,9 @@
 
                         <div class="feature-bullet-item">
                             <div class="bullet-icon-sphere">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                             </div>
                             <div class="feature-bullet-text">
                                 <h5>Dual Auth Framework</h5>
@@ -2957,7 +3150,9 @@
 
                         <div class="feature-bullet-item">
                             <div class="bullet-icon-sphere">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                             </div>
                             <div class="feature-bullet-text">
                                 <h5>WhatsApp Contact Links</h5>
@@ -2972,19 +3167,31 @@
                     <ul class="business-list">
                         <li><strong>Store Name:</strong> Digitron Associates</li>
                         <li><strong>Service Scope:</strong> CCTV & High-End Security Solutions</li>
-                        <li><strong>Store Address:</strong> Shop No. 12, Electronics Hub, Lamington Road, Hubbali, Karnataka — 580029</li>
-                        <li><strong>Working Hours:</strong> Mon–Sat: 9:00 AM – 7:00 PM <br>Sunday: 10:00 AM – 4:00 PM</li>
-                        <li><strong>Live Platform:</strong> <a href="https://digitron-seven.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan); text-decoration:none; font-weight:600; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">digitron-seven.vercel.app ↗</a></li>
-                        <li><strong>Source Code:</strong> <a href="https://github.com/LaGGod7/Digitron" target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan); text-decoration:none; font-weight:600; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">github.com/LaGGod7/Digitron ↗</a></li>
+                        <li><strong>Store Address:</strong> Shop No. 12, Electronics Hub, Lamington Road, Hubbali,
+                            Karnataka — 580029</li>
+                        <li><strong>Working Hours:</strong> Mon–Sat: 9:00 AM – 7:00 PM <br>Sunday: 10:00 AM – 4:00 PM
+                        </li>
+                        <li><strong>Live Platform:</strong> <a href="https://digitron-seven.vercel.app/" target="_blank"
+                                rel="noopener noreferrer"
+                                style="color:var(--accent-cyan); text-decoration:none; font-weight:600; transition:opacity 0.2s;"
+                                onmouseover="this.style.opacity='0.75'"
+                                onmouseout="this.style.opacity='1'">digitron-seven.vercel.app ↗</a></li>
+                        <li><strong>Source Code:</strong> <a href="https://github.com/LaGGod7/Digitron" target="_blank"
+                                rel="noopener noreferrer"
+                                style="color:var(--accent-cyan); text-decoration:none; font-weight:600; transition:opacity 0.2s;"
+                                onmouseover="this.style.opacity='0.75'"
+                                onmouseout="this.style.opacity='1'">github.com/LaGGod7/Digitron ↗</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Categories Grid -->
             <div style="margin-top:4rem;">
-                <h3 style="font-size:1.8rem; margin-bottom:1rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">12 Catalog Categories</h3>
+                <h3
+                    style="font-size:1.8rem; margin-bottom:1rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">
+                    12 Catalog Categories</h3>
                 <p>Digitron Associates maps 400+ physical parts sorted in 12 key security divisions:</p>
-                
+
                 <div class="categories-grid-box">
                     <div class="category-cell">
                         <span class="category-cell-icon">📷</span>
@@ -3051,20 +3258,27 @@
 
             <!-- Diagrams Section -->
             <div style="margin-top:4rem; margin-bottom:5rem;">
-                <h3 style="font-size:1.8rem; margin-bottom:1.5rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">Project Diagrams & Mockups</h3>
-                <p>The following architectural blueprints map the data patterns and flow maps of the e-commerce layout:</p>
-                
+                <h3
+                    style="font-size:1.8rem; margin-bottom:1.5rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">
+                    Project Diagrams & Mockups</h3>
+                <p>The following architectural blueprints map the data patterns and flow maps of the e-commerce layout:
+                </p>
+
                 <div class="diagram-grid-layout">
                     <div class="diagram-placeholder-card has-image">
-                        <img src="assets/architecture.png" alt="SecureVision architecture diagram" class="project-diagram-image">
+                        <img src="assets/architecture.png" alt="SecureVision architecture diagram"
+                            class="project-diagram-image">
                         <span class="placeholder-headline">System Architecture Blueprint</span>
-                        <span class="placeholder-subcaption">Layered view of client, application, external services, and data modules.</span>
+                        <span class="placeholder-subcaption">Layered view of client, application, external services, and
+                            data modules.</span>
                     </div>
 
                     <div class="diagram-placeholder-card has-image">
-                        <img src="assets/context-diagram.png" alt="SecureVision context diagram" class="project-diagram-image">
+                        <img src="assets/context-diagram.png" alt="SecureVision context diagram"
+                            class="project-diagram-image">
                         <span class="placeholder-headline">System Context Map</span>
-                        <span class="placeholder-subcaption">Main system interactions with customer, admin, database, WhatsApp, email, and catalogue services.</span>
+                        <span class="placeholder-subcaption">Main system interactions with customer, admin, database,
+                            WhatsApp, email, and catalogue services.</span>
                     </div>
                 </div>
             </div>
@@ -3082,25 +3296,31 @@
 
             <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-bottom:1rem;">Problem Statement</h3>
             <p class="bio-text-para" style="font-size:1.15rem;">
-                Local CCTV businesses in Hubbali had no digital presence. Customers had to visit in person to know product availability and pricing. The owner managed a 400+ SKU inventory in an Excel sheet with no way to share it digitally.
+                Local CCTV businesses in Hubbali had no digital presence. Customers had to visit in person to know
+                product availability and pricing. The owner managed a 400+ SKU inventory in an Excel sheet with no way
+                to share it digitally.
             </p>
 
-            <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-top:3rem; margin-bottom:1rem;">Stakeholder Taxonomy</h3>
+            <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-top:3rem; margin-bottom:1rem;">Stakeholder
+                Taxonomy</h3>
             <div class="stakeholders-row">
                 <div class="neon-card stakeholder-card">
                     <span class="stakeholder-card-icon">💼</span>
                     <h4>Business Owner</h4>
-                    <p>Needs direct inventory tracking, quick SKU adjustments, and visual layouts to capture local Hubbali leads.</p>
+                    <p>Needs direct inventory tracking, quick SKU adjustments, and visual layouts to capture local
+                        Hubbali leads.</p>
                 </div>
                 <div class="neon-card stakeholder-card">
                     <span class="stakeholder-card-icon">👤</span>
                     <h4>End Customers</h4>
-                    <p>Demand fast catalog filtering, product specs, dynamic cart building, and quick ways to reach the merchant.</p>
+                    <p>Demand fast catalog filtering, product specs, dynamic cart building, and quick ways to reach the
+                        merchant.</p>
                 </div>
                 <div class="neon-card stakeholder-card">
                     <span class="stakeholder-card-icon">🔑</span>
                     <h4>Site Admin</h4>
-                    <p>Requires secure, access-controlled endpoints to execute catalog CRUD items and manage dynamic parameters.</p>
+                    <p>Requires secure, access-controlled endpoints to execute catalog CRUD items and manage dynamic
+                        parameters.</p>
                 </div>
             </div>
 
@@ -3164,29 +3384,36 @@
                 </table>
             </div>
 
-            <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-bottom:1rem;">Non-Functional Specifications</h3>
+            <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-bottom:1rem;">Non-Functional Specifications
+            </h3>
             <div class="timeline-steps" style="margin-top:2rem; margin-bottom:4rem;">
                 <div class="neon-card">
                     <h4 style="color:var(--accent-cyan); margin-bottom:0.5rem;">⚡ Performance</h4>
-                    <p>Initial paint of the product catalog should load in under 2 seconds using server caching strategies.</p>
+                    <p>Initial paint of the product catalog should load in under 2 seconds using server caching
+                        strategies.</p>
                 </div>
                 <div class="neon-card">
                     <h4 style="color:var(--accent-cyan); margin-bottom:0.5rem;">📈 Scalability</h4>
-                    <p>Architecture supports scaling to thousands of catalog records without affecting browser rendering speeds.</p>
+                    <p>Architecture supports scaling to thousands of catalog records without affecting browser rendering
+                        speeds.</p>
                 </div>
                 <div class="neon-card">
                     <h4 style="color:var(--accent-cyan); margin-bottom:0.5rem;">🔒 Security</h4>
-                    <p>Protected REST controllers utilizing stateless JWT, crypt-hashed passwords, and structured CORS rules.</p>
+                    <p>Protected REST controllers utilizing stateless JWT, crypt-hashed passwords, and structured CORS
+                        rules.</p>
                 </div>
                 <div class="neon-card">
                     <h4 style="color:var(--accent-cyan); margin-bottom:0.5rem;">📱 Usability</h4>
-                    <p>Responsive design prioritizing mobile viewports, using high contrast styles and accessible inputs.</p>
+                    <p>Responsive design prioritizing mobile viewports, using high contrast styles and accessible
+                        inputs.</p>
                 </div>
             </div>
 
             <!-- Analysis Diagram Placeholder -->
             <div style="margin-bottom:5rem;">
-                <h3 style="font-size:1.6rem; margin-bottom:1.5rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">Requirements Diagram Workspace</h3>
+                <h3
+                    style="font-size:1.6rem; margin-bottom:1.5rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">
+                    Requirements Diagram Workspace</h3>
                 <div class="diagram-placeholder-card has-image">
                     <img src="assets/use-case.png" alt="SecureVision use case diagram" class="project-diagram-image">
                     <span class="placeholder-headline">Use Case Diagram / Requirements Flow</span>
@@ -3209,11 +3436,13 @@
             <div class="architecture-grid">
                 <div class="arch-block-card">
                     <div class="arch-block-title">Frontend Client</div>
-                    <p style="font-size:0.95rem;">React SPA, modular component state orchestration, Vite HMR, and Tailwind UI elements.</p>
+                    <p style="font-size:0.95rem;">React SPA, modular component state orchestration, Vite HMR, and
+                        Tailwind UI elements.</p>
                 </div>
                 <div class="arch-block-card">
                     <div class="arch-block-title">Backend API</div>
-                    <p style="font-size:0.95rem;">REST API routing, Passport middleware controllers, and token routers.</p>
+                    <p style="font-size:0.95rem;">REST API routing, Passport middleware controllers, and token routers.
+                    </p>
                 </div>
                 <div class="arch-block-card">
                     <div class="arch-block-title">Prisma Connector</div>
@@ -3221,11 +3450,13 @@
                 </div>
                 <div class="arch-block-card">
                     <div class="arch-block-title">Database Storage</div>
-                    <p style="font-size:0.95rem;">MongoDB Atlas storing unstructured specs lists and inventory datasets.</p>
+                    <p style="font-size:0.95rem;">MongoDB Atlas storing unstructured specs lists and inventory datasets.
+                    </p>
                 </div>
             </div>
 
-            <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-bottom:1rem;">Tech Stack Decision Rationale</h3>
+            <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-bottom:1rem;">Tech Stack Decision Rationale
+            </h3>
             <div class="glass-table-wrapper">
                 <table class="glass-table">
                     <thead>
@@ -3237,27 +3468,33 @@
                     <tbody>
                         <tr>
                             <td><strong>React + Vite</strong></td>
-                            <td>Delivers rapid Hot Module Replacement (HMR), components encapsulation, and efficient DOM renders.</td>
+                            <td>Delivers rapid Hot Module Replacement (HMR), components encapsulation, and efficient DOM
+                                renders.</td>
                         </tr>
                         <tr>
                             <td><strong>Express.js</strong></td>
-                            <td>Provides a lightweight, unopinionated routing layer to construct API responses rapidly.</td>
+                            <td>Provides a lightweight, unopinionated routing layer to construct API responses rapidly.
+                            </td>
                         </tr>
                         <tr>
                             <td><strong>MongoDB</strong></td>
-                            <td>Flexible document model seamlessly maps varied specifications of diverse security equipment.</td>
+                            <td>Flexible document model seamlessly maps varied specifications of diverse security
+                                equipment.</td>
                         </tr>
                         <tr>
                             <td><strong>Prisma ORM</strong></td>
-                            <td>Type-safe query compilation, simple schema files, and automated database transitions.</td>
+                            <td>Type-safe query compilation, simple schema files, and automated database transitions.
+                            </td>
                         </tr>
                         <tr>
                             <td><strong>React Query</strong></td>
-                            <td>Performs declarative background caching and avoids redundant client network fetch loops.</td>
+                            <td>Performs declarative background caching and avoids redundant client network fetch loops.
+                            </td>
                         </tr>
                         <tr>
                             <td><strong>Stateless JWT</strong></td>
-                            <td>Enables lightweight validation headers without demanding storage access operations on the server.</td>
+                            <td>Enables lightweight validation headers without demanding storage access operations on
+                                the server.</td>
                         </tr>
                         <tr>
                             <td><strong>Google OAuth 2.0</strong></td>
@@ -3269,11 +3506,13 @@
 
             <!-- Database Collections -->
             <div style="margin-top:4rem; margin-bottom:4rem;">
-                <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-bottom:1.5rem;">Database Collections & Fields</h3>
+                <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-bottom:1.5rem;">Database Collections &
+                    Fields</h3>
                 <div class="timeline-steps">
                     <div class="neon-card">
                         <h4 style="color:var(--accent-cyan); margin-bottom:0.5rem;">📁 products</h4>
-                        <p style="font-size:0.95rem;">id, name, brand, category, specs (JSON), images, price, stock, ratings</p>
+                        <p style="font-size:0.95rem;">id, name, brand, category, specs (JSON), images, price, stock,
+                            ratings</p>
                     </div>
                     <div class="neon-card">
                         <h4 style="color:var(--accent-cyan); margin-bottom:0.5rem;">📁 reviews</h4>
@@ -3292,31 +3531,39 @@
 
             <!-- System Design Placeholders -->
             <div style="margin-top:4rem; margin-bottom:5rem;">
-                <h3 style="font-size:1.6rem; margin-bottom:1.5rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">Structural Diagrams Workspace</h3>
-                
+                <h3
+                    style="font-size:1.6rem; margin-bottom:1.5rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">
+                    Structural Diagrams Workspace</h3>
+
                 <div class="diagram-grid-layout">
                     <div class="diagram-placeholder-card has-image">
-                        <img src="assets/architecture.png" alt="Layered architecture diagram" class="project-diagram-image">
+                        <img src="assets/architecture.png" alt="Layered architecture diagram"
+                            class="project-diagram-image">
                         <span class="placeholder-headline">Detailed Architecture Pipeline</span>
-                        <span class="placeholder-subcaption">System modules arranged by client, app, service, and data layers.</span>
+                        <span class="placeholder-subcaption">System modules arranged by client, app, service, and data
+                            layers.</span>
                     </div>
 
                     <div class="diagram-placeholder-card has-image">
                         <img src="assets/activity-diagram.png" alt="Activity diagram" class="project-diagram-image">
                         <span class="placeholder-headline">Activity Flow</span>
-                        <span class="placeholder-subcaption">Visitor, system, admin, and external-service workflow.</span>
+                        <span class="placeholder-subcaption">Visitor, system, admin, and external-service
+                            workflow.</span>
                     </div>
 
                     <div class="diagram-placeholder-card has-image">
-                        <img src="assets/whatsapp-sequence.png" alt="WhatsApp integration sequence diagram" class="project-diagram-image">
+                        <img src="assets/whatsapp-sequence.png" alt="WhatsApp integration sequence diagram"
+                            class="project-diagram-image">
                         <span class="placeholder-headline">WhatsApp Integration Sequence</span>
                         <span class="placeholder-subcaption">Pre-filled enquiry flow from browser UI to WhatsApp.</span>
                     </div>
 
                     <div class="diagram-placeholder-card has-image">
-                        <img src="assets/repository-structure.jpeg" alt="Repository structure diagram" class="project-diagram-image">
+                        <img src="assets/repository-structure.jpeg" alt="Repository structure diagram"
+                            class="project-diagram-image">
                         <span class="placeholder-headline">Repository Structure</span>
-                        <span class="placeholder-subcaption">Frontend, backend, database, docs, and root-level structure.</span>
+                        <span class="placeholder-subcaption">Frontend, backend, database, docs, and root-level
+                            structure.</span>
                     </div>
                 </div>
             </div>
@@ -3337,26 +3584,30 @@
             <div class="highlights-grid">
                 <div class="neon-card">
                     <h4 style="color:var(--accent-cyan); margin-bottom:0.8rem;">📦 Optimized Filter Engine</h4>
-                    <p>Designed a custom Multi-Filter engine using React's `useMemo` that evaluates 400+ security parts instantly across multiple parameters — without importing bulky external library assets.</p>
+                    <p>Designed a custom Multi-Filter engine using React's `useMemo` that evaluates 400+ security parts
+                        instantly across multiple parameters — without importing bulky external library assets.</p>
                 </div>
                 <div class="neon-card">
                     <h4 style="color:var(--accent-cyan); margin-bottom:0.8rem;">⚙️ Admin Portal Operations</h4>
-                    <p>Engineered full CRUD logic allowing the store owner to add products, modify pricing, and alter core contact and operating hours details in real-time, instantly saving to MongoDB.</p>
+                    <p>Engineered full CRUD logic allowing the store owner to add products, modify pricing, and alter
+                        core contact and operating hours details in real-time, instantly saving to MongoDB.</p>
                 </div>
                 <div class="neon-card">
                     <h4 style="color:var(--accent-cyan); margin-bottom:0.8rem;">📊 Data Migration Automation</h4>
-                    <p>Wrote an asynchronous Node.js utility that parsed unstructured product sheets (400+ SKU lines) and transformed the records into structured, database-compatible JSON records.</p>
+                    <p>Wrote an asynchronous Node.js utility that parsed unstructured product sheets (400+ SKU lines)
+                        and transformed the records into structured, database-compatible JSON records.</p>
                 </div>
                 <div class="neon-card">
                     <h4 style="color:var(--accent-cyan); margin-bottom:0.8rem;">💬 Dynamic WhatsApp Linker</h4>
-                    <p>Programmed a float button that auto-generates custom texts, linking a client's specific model parameters to the store owner's chat dashboard.</p>
+                    <p>Programmed a float button that auto-generates custom texts, linking a client's specific model
+                        parameters to the store owner's chat dashboard.</p>
                 </div>
             </div>
 
             <!-- Code Editor Component -->
             <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-bottom:0.5rem;">Featured Code Snippet</h3>
             <p>A look at the custom multi-filter solution powering the product catalog:</p>
-            
+
             <div class="code-editor-mockup">
                 <div class="editor-header-bar">
                     <div class="editor-dots">
@@ -3387,7 +3638,8 @@
                     <div class="timeline-milestone-content">
                         <span class="timeline-milestone-date">Sprint 1</span>
                         <h4>Vite Configuration & Layout Mockups</h4>
-                        <p>Constructed the project architecture, set up the React client routing, and drafted initial mock viewports.</p>
+                        <p>Constructed the project architecture, set up the React client routing, and drafted initial
+                            mock viewports.</p>
                     </div>
                 </div>
 
@@ -3396,7 +3648,8 @@
                     <div class="timeline-milestone-content">
                         <span class="timeline-milestone-date">Sprint 2</span>
                         <h4>Catalog Migration & Prisma Sync</h4>
-                        <p>Drafted raw database collections, structured Prisma database schema mapping, and executed seed scripts to load 400+ SKU records.</p>
+                        <p>Drafted raw database collections, structured Prisma database schema mapping, and executed
+                            seed scripts to load 400+ SKU records.</p>
                     </div>
                 </div>
 
@@ -3405,7 +3658,8 @@
                     <div class="timeline-milestone-content">
                         <span class="timeline-milestone-date">Sprint 3</span>
                         <h4>Core Storefront & Multi-Filters Layout</h4>
-                        <p>Programmed product list matrices, filter bars, detailed spec overlays, and the dynamic sidebar search panels.</p>
+                        <p>Programmed product list matrices, filter bars, detailed spec overlays, and the dynamic
+                            sidebar search panels.</p>
                     </div>
                 </div>
 
@@ -3414,7 +3668,8 @@
                     <div class="timeline-milestone-content">
                         <span class="timeline-milestone-date">Sprint 4</span>
                         <h4>Merchant CRUD Controllers & settings</h4>
-                        <p>Programmed security barriers and inventory panels, allowing complete CRUD editing of products.</p>
+                        <p>Programmed security barriers and inventory panels, allowing complete CRUD editing of
+                            products.</p>
                     </div>
                 </div>
 
@@ -3423,7 +3678,8 @@
                     <div class="timeline-milestone-content">
                         <span class="timeline-milestone-date">Sprint 5</span>
                         <h4>Session Gates & Dual Auth Hooks</h4>
-                        <p>Programmed secure JWT token structures for admin endpoints, and configured Google OAuth 2.0 customer hooks.</p>
+                        <p>Programmed secure JWT token structures for admin endpoints, and configured Google OAuth 2.0
+                            customer hooks.</p>
                     </div>
                 </div>
 
@@ -3432,7 +3688,8 @@
                     <div class="timeline-milestone-content">
                         <span class="timeline-milestone-date">Sprint 6</span>
                         <h4>Package Calculator & Review System</h4>
-                        <p>Programmed custom bundle configuration panels, comparison tables, and local review compilation fields.</p>
+                        <p>Programmed custom bundle configuration panels, comparison tables, and local review
+                            compilation fields.</p>
                     </div>
                 </div>
 
@@ -3441,21 +3698,26 @@
                     <div class="timeline-milestone-content">
                         <span class="timeline-milestone-date">Sprint 7</span>
                         <h4>Load Testing & Server Launch</h4>
-                        <p>Performed system optimization checks, resolved viewport adjustments, and launched code targets on Vercel and Railway host lines.</p>
+                        <p>Performed system optimization checks, resolved viewport adjustments, and launched code
+                            targets on Vercel and Railway host lines.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Implementation Screenshots Grid -->
             <div style="margin-top:4rem; margin-bottom:5rem;">
-                <h3 style="font-size:1.6rem; margin-bottom:1.5rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">Production Platform Interface</h3>
+                <h3
+                    style="font-size:1.6rem; margin-bottom:1.5rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">
+                    Production Platform Interface</h3>
                 <p style="margin-bottom:2rem; color:var(--text-muted);">
-                    Below are the high-fidelity user interface captures demonstrating the end-to-end functionality of the deployed e-commerce platform:
+                    Below are the high-fidelity user interface captures demonstrating the end-to-end functionality of
+                    the deployed e-commerce platform:
                 </p>
                 <div class="screenshot-grid">
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 112922.png" alt="Home Page Hero Section" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 112922.png" alt="Home Page Hero Section"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>1. Landing & Brand Identity</h5>
@@ -3464,7 +3726,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 112937.png" alt="CCTV Product Catalog" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 112937.png" alt="CCTV Product Catalog"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>2. Structured Product Catalog</h5>
@@ -3473,7 +3736,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 113004.png" alt="Product Filter & Search" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 113004.png" alt="Product Filter & Search"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>3. Custom Multi-Criteria Filter</h5>
@@ -3482,7 +3746,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 113012.png" alt="Product Comparison Matrix" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 113012.png" alt="Product Comparison Matrix"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>4. Model Comparison Engine</h5>
@@ -3491,7 +3756,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 113026.png" alt="Shopping Cart & Enquiry" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 113026.png" alt="Shopping Cart & Enquiry"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>5. Shopping Cart & Enquiry Details</h5>
@@ -3500,7 +3766,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 113308.png" alt="WhatsApp Chat Redirection" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 113308.png" alt="WhatsApp Chat Redirection"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>6. WhatsApp Link Dispatch</h5>
@@ -3509,7 +3776,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 113321.png" alt="Admin Authentication Portal" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 113321.png" alt="Admin Authentication Portal"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>7. Secure Admin Portal Gateway</h5>
@@ -3518,7 +3786,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 113347.png" alt="Admin Dashboard Overview" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 113347.png" alt="Admin Dashboard Overview"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>8. Merchant Operations Dashboard</h5>
@@ -3527,7 +3796,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 113357.png" alt="Admin Product Inventory" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 113357.png" alt="Admin Product Inventory"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>9. Catalog Inventory Control</h5>
@@ -3536,7 +3806,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 113405.png" alt="Admin Product Editor" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 113405.png" alt="Admin Product Editor"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>10. Dynamic Product Specification Editor</h5>
@@ -3545,7 +3816,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 113413.png" alt="Product Review Interface" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 113413.png" alt="Product Review Interface"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>11. User Feedback & Reviews</h5>
@@ -3554,7 +3826,8 @@
                     </div>
                     <div class="screenshot-card" onclick="openLightbox(this)">
                         <div class="screenshot-image-wrapper">
-                            <img src="assets/Screenshot 2026-06-05 113422.png" alt="Bundle Package Builder" class="screenshot-img">
+                            <img src="assets/Screenshot 2026-06-05 113422.png" alt="Bundle Package Builder"
+                                class="screenshot-img">
                         </div>
                         <div class="screenshot-info">
                             <h5>12. Security Bundle Configurator</h5>
@@ -3576,11 +3849,13 @@
             </div>
 
             <p class="bio-text-para">
-                Testing for Digitron Associates covered functional testing, API testing (Postman), and manual UI/UX testing across devices.
+                Testing for Digitron Associates covered functional testing, API testing (Postman), and manual UI/UX
+                testing across devices.
             </p>
 
-            <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-top:2.5rem; margin-bottom:1rem;">Testing Log</h3>
-            
+            <h3 style="font-size:1.6rem; color:var(--accent-orange); margin-top:2.5rem; margin-bottom:1rem;">Testing Log
+            </h3>
+
             <div class="glass-table-wrapper">
                 <table class="glass-table">
                     <thead>
@@ -3673,33 +3948,43 @@
                 <div class="neon-card bug-card">
                     <span class="bug-card-icon">🐞</span>
                     <h4>Filter State Retention Defect</h4>
-                    <p><strong>Bug:</strong> Active filter parameters were not resetting when switching categories, displaying blank cells.<br><strong>Solution:</strong> Embedded cleanup dispatch handlers inside React's `useEffect` hooks.</p>
+                    <p><strong>Bug:</strong> Active filter parameters were not resetting when switching categories,
+                        displaying blank cells.<br><strong>Solution:</strong> Embedded cleanup dispatch handlers inside
+                        React's `useEffect` hooks.</p>
                 </div>
                 <div class="neon-card bug-card">
                     <span class="bug-card-icon">🐞</span>
                     <h4>MongoDB Cold-Start Failure</h4>
-                    <p><strong>Bug:</strong> Server database connections would periodically timeout on cold environment starts.<br><strong>Solution:</strong> Appended optimized `serverSelectionTimeoutMS` variables inside database connection configurations.</p>
+                    <p><strong>Bug:</strong> Server database connections would periodically timeout on cold environment
+                        starts.<br><strong>Solution:</strong> Appended optimized `serverSelectionTimeoutMS` variables
+                        inside database connection configurations.</p>
                 </div>
                 <div class="neon-card bug-card">
                     <span class="bug-card-icon">🐞</span>
                     <h4>JWT Expiry Unhandled Crash</h4>
-                    <p><strong>Bug:</strong> Admin authentication tokens expiring without notice caused raw network failure messages.<br><strong>Solution:</strong> Programmed Axios token interceptors executing an automatic routing to the login interface upon 401 returns.</p>
+                    <p><strong>Bug:</strong> Admin authentication tokens expiring without notice caused raw network
+                        failure messages.<br><strong>Solution:</strong> Programmed Axios token interceptors executing an
+                        automatic routing to the login interface upon 401 returns.</p>
                 </div>
             </div>
 
             <!-- Diagnostics Placeholders -->
             <div style="margin-top:4rem; margin-bottom:5rem;">
-                <h3 style="font-size:1.6rem; margin-bottom:1.5rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">Diagnostic Diagrams Workspace</h3>
+                <h3
+                    style="font-size:1.6rem; margin-bottom:1.5rem; border-left:4px solid var(--accent-orange); padding-left:1rem;">
+                    Diagnostic Diagrams Workspace</h3>
                 <div class="diagram-grid-layout">
                     <div class="diagram-placeholder-card has-image">
                         <img src="assets/test-matrix-1.png" alt="Testing matrix part one" class="project-diagram-image">
                         <span class="placeholder-headline">Testing Matrix - Catalogue & Bundles</span>
-                        <span class="placeholder-subcaption">Product display, image visibility, specifications, filters, and bundle checks.</span>
+                        <span class="placeholder-subcaption">Product display, image visibility, specifications, filters,
+                            and bundle checks.</span>
                     </div>
                     <div class="diagram-placeholder-card has-image">
                         <img src="assets/test-matrix-2.png" alt="Testing matrix part two" class="project-diagram-image">
                         <span class="placeholder-headline">Testing Matrix - Comparison & WhatsApp</span>
-                        <span class="placeholder-subcaption">Comparison, best-for tags, WhatsApp redirection, pre-filled enquiries, and detail page checks.</span>
+                        <span class="placeholder-subcaption">Comparison, best-for tags, WhatsApp redirection, pre-filled
+                            enquiries, and detail page checks.</span>
                     </div>
                 </div>
             </div>
@@ -3714,24 +3999,38 @@
                 <span class="subtitle">Milestones</span>
                 <h2>Certifications & Achievements</h2>
             </div>
-            
+
             <p class="bio-text-para">
-                I actively pursue technical certifications to validate my knowledge in cloud technologies, core programming, and modern engineering practices.
+                I actively pursue technical certifications to validate my knowledge in cloud technologies, core
+                programming, and modern engineering practices.
             </p>
 
             <div class="certificate-single-container" style="max-width: 800px; margin: 3rem auto; text-align: center;">
-                <div class="neon-card screenshot-card" onclick="openLightbox(this)" style="cursor: pointer; transition: transform 0.3s ease; display: block; overflow: hidden; border-radius: 16px;">
-                    <div class="screenshot-image-wrapper" style="overflow: hidden; border-radius: 12px 12px 0 0; background: #0f172a; display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                        <img src="assets/certificate.png" alt="DevOps Basics for Everyone Certificate" class="screenshot-img" style="max-width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 8px;">
+                <div class="neon-card screenshot-card" onclick="openLightbox(this)"
+                    style="cursor: pointer; transition: transform 0.3s ease; display: block; overflow: hidden; border-radius: 16px;">
+                    <div class="screenshot-image-wrapper"
+                        style="overflow: hidden; border-radius: 12px 12px 0 0; background: #0f172a; display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                        <img src="assets/certificate.png" alt="DevOps Basics for Everyone Certificate"
+                            class="screenshot-img"
+                            style="max-width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 8px;">
                     </div>
-                    <div class="screenshot-info" style="padding: 1.5rem 2rem; text-align: left; background-color: var(--bg-card);">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-                            <h5 style="margin: 0; font-size: 1.4rem; font-family: var(--font-heading); color: var(--text-primary);">DevOps Basics for Everyone</h5>
-                            <span class="cert-status-badge status-completed" style="font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.8rem; border-radius: 30px; text-transform: uppercase; letter-spacing: 0.05em; background-color: rgba(127, 255, 0, 0.12); color: var(--accent-lime); border: 1px solid rgba(127,255,0,0.25);">Completed</span>
+                    <div class="screenshot-info"
+                        style="padding: 1.5rem 2rem; text-align: left; background-color: var(--bg-card);">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                            <h5
+                                style="margin: 0; font-size: 1.4rem; font-family: var(--font-heading); color: var(--text-primary);">
+                                DevOps Basics for Everyone</h5>
+                            <span class="cert-status-badge status-completed"
+                                style="font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.8rem; border-radius: 30px; text-transform: uppercase; letter-spacing: 0.05em; background-color: rgba(127, 255, 0, 0.12); color: var(--accent-lime); border: 1px solid rgba(127,255,0,0.25);">Completed</span>
                         </div>
-                        <p class="provider" style="font-size: 1rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 0.8rem;">IBM (via edX)</p>
+                        <p class="provider"
+                            style="font-size: 1rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 0.8rem;">
+                            IBM (via edX)</p>
                         <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
-                            Verified professional certificate demonstrating fundamental competencies in DevOps concepts, Continuous Integration/Continuous Deployment (CI/CD) pipelines, containerization mechanics, agile development methodologies, and cloud-native application setups.
+                            Verified professional certificate demonstrating fundamental competencies in DevOps concepts,
+                            Continuous Integration/Continuous Deployment (CI/CD) pipelines, containerization mechanics,
+                            agile development methodologies, and cloud-native application setups.
                         </p>
                     </div>
                 </div>
@@ -3749,24 +4048,32 @@
             </div>
 
             <p class="learning-intro-para">
-                Building a complete project case study was one of the most challenging and rewarding parts of my engineering journey so far. It taught me how to think beyond code and communicate decisions clearly.
+                Building a complete project case study was one of the most challenging and rewarding parts of my
+                engineering journey so far. It taught me how to think beyond code and communicate decisions clearly.
             </p>
 
             <div class="reflections-masonry">
-                
+
                 <div class="neon-card reflection-masonry-card">
                     <div class="reflection-card-number">01</div>
-                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">🤝 Collaborative Coding beats Solo Dev</h4>
-                    <p>Working in a team of five (Atharva, Ashutosh, Yashwant, Anoosha, and myself) taught me the value of delegation, alignment, and source control. Building different modules of the CCTV platform required clear interfaces and mutual trust.</p>
+                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">🤝 Collaborative
+                        Coding beats Solo Dev</h4>
+                    <p>Working in a team of five (Atharva, Ashutosh, Yashwant, Anoosha, and myself) taught me the value
+                        of delegation, alignment, and source control. Building different modules of the CCTV platform
+                        required clear interfaces and mutual trust.</p>
                     <div class="reflection-quote-block">
-                        <p>"Software engineering is a team sport; code is only as clean as the team's communication."</p>
+                        <p>"Software engineering is a team sport; code is only as clean as the team's communication."
+                        </p>
                     </div>
                 </div>
 
                 <div class="neon-card reflection-masonry-card">
                     <div class="reflection-card-number">02</div>
-                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">🔌 Bridging Frontend & Backend Logic</h4>
-                    <p>Connecting React state flows to an Express backend was a massive learning loop. Understanding how database queries, middleware security gates, and REST controllers interact has shifted my perspective to system-level thinking.</p>
+                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">🔌 Bridging Frontend
+                        & Backend Logic</h4>
+                    <p>Connecting React state flows to an Express backend was a massive learning loop. Understanding how
+                        database queries, middleware security gates, and REST controllers interact has shifted my
+                        perspective to system-level thinking.</p>
                     <div class="reflection-quote-block">
                         <p>"An interface is just a window; the real magic happens in the data pipeline behind it."</p>
                     </div>
@@ -3774,8 +4081,11 @@
 
                 <div class="neon-card reflection-masonry-card">
                     <div class="reflection-card-number">03</div>
-                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">💾 Seeding Workflows & Database Sync</h4>
-                    <p>Managing product seeding files containing over 400 lines of CCTV catalog components forced me to learn schema normalization, migration safety, and how to verify backend database connections early on.</p>
+                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">💾 Seeding Workflows
+                        & Database Sync</h4>
+                    <p>Managing product seeding files containing over 400 lines of CCTV catalog components forced me to
+                        learn schema normalization, migration safety, and how to verify backend database connections
+                        early on.</p>
                     <div class="reflection-quote-block">
                         <p>"Design schemas for tomorrow's queries, but parse files for today's database seeds."</p>
                     </div>
@@ -3783,8 +4093,11 @@
 
                 <div class="neon-card reflection-masonry-card" style="grid-column: span 2;">
                     <div class="reflection-card-number">04</div>
-                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">⏱️ Agile Sprints & Incremental Slices</h4>
-                    <p>Splitting our work into Sprints made the project highly manageable. We learned to ship incremental working features, debug them in parallel, and continuously review progress together during team standups.</p>
+                    <h4 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--accent-orange);">⏱️ Agile Sprints &
+                        Incremental Slices</h4>
+                    <p>Splitting our work into Sprints made the project highly manageable. We learned to ship
+                        incremental working features, debug them in parallel, and continuously review progress together
+                        during team standups.</p>
                     <div class="reflection-quote-block">
                         <p>"Sprints divide complex backlogs into measurable checkpoints of working software."</p>
                     </div>
@@ -3802,23 +4115,29 @@
                 <li><a href="#home" class="footer-link-anchor" onclick="navigateTo('home')">Home</a></li>
                 <li><a href="#about" class="footer-link-anchor" onclick="navigateTo('about')">About Me</a></li>
                 <li><a href="#learning" class="footer-link-anchor" onclick="navigateTo('learning')">Learning</a></li>
-                <li><a href="#project-overview" class="footer-link-anchor" onclick="navigateTo('project-overview')">Project Overview</a></li>
+                <li><a href="#project-overview" class="footer-link-anchor"
+                        onclick="navigateTo('project-overview')">Project Overview</a></li>
             </ul>
             <p>© 2026 Goureesh N Doddamani · KLE Technological University · CS Engineering</p>
-            <p style="font-size:0.8rem; margin-top:0.4rem; color:var(--text-muted);">Crafted with Vanilla Javascript & Bold tech-aesthetics.</p>
+            <p style="font-size:0.8rem; margin-top:0.4rem; color:var(--text-muted);">Crafted with Vanilla Javascript &
+                Bold tech-aesthetics.</p>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Widget -->
-    <a href="https://wa.me/911234567890?text=Hi%20Goureesh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" class="whatsapp-floating-widget" aria-label="Quick Contact on WhatsApp">
+    <a href="https://wa.me/911234567890?text=Hi%20Goureesh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!"
+        target="_blank" class="whatsapp-floating-widget" aria-label="Quick Contact on WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.747 1.451 5.436 0 9.86-4.42 9.864-9.852.002-2.632-1.023-5.105-2.887-6.97C16.508 1.968 14.037.943 11.41.942 5.972.942 1.548 5.363 1.545 10.796c-.002 1.764.482 3.486 1.398 5.015L1.97 21.037l5.209-1.365-.532-.518z"/>
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.747 1.451 5.436 0 9.86-4.42 9.864-9.852.002-2.632-1.023-5.105-2.887-6.97C16.508 1.968 14.037.943 11.41.942 5.972.942 1.548 5.363 1.545 10.796c-.002 1.764.482 3.486 1.398 5.015L1.97 21.037l5.209-1.365-.532-.518z" />
         </svg>
     </a>
 
     <!-- Back to Top Widget -->
     <button id="back-to-top" class="back-to-top-widget" aria-label="Scroll back to top">
-        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M5 15l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
     </button>
 
     <!-- Core Scripts Router & Particle Canvas Background -->
@@ -3871,7 +4190,7 @@
         function navigateTo(pageId) {
             // Close mobile menu first if open
             document.getElementById('nav-menu').classList.remove('mobile-open');
-            
+
             // Hide all views
             const pages = document.querySelectorAll('.portfolio-page');
             pages.forEach(page => {
@@ -3919,7 +4238,7 @@
         function handleRouting() {
             const hash = window.location.hash.substring(1);
             const validPages = ['home', 'about', 'learning', 'project-overview', 'project-analysis', 'project-design', 'project-implementation', 'project-testing', 'certification', 'reflections'];
-            
+
             if (validPages.includes(hash)) {
                 navigateTo(hash);
             } else {
@@ -3941,7 +4260,7 @@
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
             const topBtn = document.getElementById('back-to-top');
-            
+
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
@@ -3974,7 +4293,7 @@
         function runJavaScriptDemo() {
             const consoleBox = document.getElementById('js-console-output');
             consoleBox.innerHTML = '';
-            
+
             // Add lines mimicking compiler/execution
             const lines = [
                 { text: '> Initializing compiler runtime...', type: 'info' },
@@ -3983,7 +4302,7 @@
                 { text: 'Match: Goureesh', type: 'success' },
                 { text: 'Script exited successfully with status 0.', type: 'info' }
             ];
-            
+
             lines.forEach((line, index) => {
                 setTimeout(() => {
                     const lineEl = document.createElement('div');
@@ -3993,7 +4312,7 @@
                 }, index * 400);
             });
         }
-        
+
         let reactCounterStateVal = 0;
         function incrementReactCounter() {
             reactCounterStateVal++;
@@ -4010,11 +4329,11 @@
         function togglePanel(panelId) {
             const panel = document.getElementById('panel-' + panelId);
             const activeStatus = panel.classList.contains('active');
-            
+
             // Collapse all panels first
             const allPanels = document.querySelectorAll('.expandable-panel');
             allPanels.forEach(p => p.classList.remove('active'));
-            
+
             // Expand clicked panel if it wasn't open
             if (!activeStatus) {
                 panel.classList.add('active');
@@ -4028,7 +4347,7 @@
         function initCountUp() {
             if (countUpExecuted) return;
             const stats = document.querySelectorAll('.stat-number-label[data-target]');
-            
+
             stats.forEach(stat => {
                 const target = parseInt(stat.getAttribute('data-target'), 10);
                 const isPlus = stat.innerText.includes('+');
@@ -4074,7 +4393,7 @@
             draw() {
                 this.pulse += this.speed;
                 const alpha = 0.15 + Math.sin(this.pulse) * 0.08;
-                
+
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius + Math.sin(this.pulse) * 0.8, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(0, 212, 255, ${alpha})`;
@@ -4105,15 +4424,15 @@
         function drawConnections() {
             ctx.strokeStyle = 'rgba(0, 212, 255, 0.035)';
             ctx.lineWidth = 1;
-            
+
             for (let i = 0; i < nodesList.length; i++) {
                 for (let j = i + 1; j < nodesList.length; j++) {
                     const dist = Math.hypot(nodesList[i].x - nodesList[j].x, nodesList[i].y - nodesList[j].y);
-                    
+
                     if (dist < 180) {
                         ctx.beginPath();
                         ctx.moveTo(nodesList[i].x, nodesList[i].y);
-                        
+
                         // Trace orthogonal line segments resembling PCB wires
                         const midX = (nodesList[i].x + nodesList[j].x) / 2;
                         ctx.lineTo(midX, nodesList[i].y);
@@ -4127,14 +4446,14 @@
 
         function animateBgCanvas() {
             ctx.clearRect(0, 0, width, height);
-            
+
             drawConnections();
-            
+
             nodesList.forEach(node => {
                 node.update();
                 node.draw();
             });
-            
+
             requestAnimationFrame(animateBgCanvas);
         }
 
@@ -4143,23 +4462,23 @@
         /* =========================================
            6. INTERACTIVE SCREENSHOT LIGHTBOX
            ========================================= */
-        window.openLightbox = function(element) {
+        window.openLightbox = function (element) {
             const lightbox = document.getElementById('image-lightbox');
             const img = document.getElementById('lightbox-img');
             const caption = document.getElementById('lightbox-caption');
-            
+
             const cardImg = element.querySelector('.screenshot-img');
             const cardTitle = element.querySelector('.screenshot-info h5').innerText;
             const cardDesc = element.querySelector('.screenshot-info p').innerText;
 
             img.src = cardImg.src;
             caption.innerHTML = `<span style="color:var(--accent-cyan); font-weight:700;">${cardTitle}</span> &middot; <span style="color:var(--text-secondary); font-size:1rem;">${cardDesc}</span>`;
-            
+
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden'; // Disable background scrolling
         }
 
-        window.closeLightbox = function() {
+        window.closeLightbox = function () {
             const lightbox = document.getElementById('image-lightbox');
             lightbox.classList.remove('active');
             document.body.style.overflow = 'auto'; // Re-enable scrolling
@@ -4173,9 +4492,5 @@
         <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
 </body>
+
 </html>
-
-
-
-
-
